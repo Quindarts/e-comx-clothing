@@ -1,13 +1,16 @@
 //font
 $roboto-font: "Roboto", sans-serif;
-
 //colors:
 $black: #292429;
+$black-300:rgb(30, 41, 59);
+$black-100: #3d5d7d;
+
 $white: #ffff;
 $pink: #fee2e2;
 $browen: #b84f59;
 $red: #ef4747;
 
+$grey-700: #57587f;
 $grey-650: #6b7280;
 $grey-600: #7b829e;
 $grey-550: #8692a5;
@@ -16,9 +19,11 @@ $grey-450: #dee4ec;
 $grey-400: #f7f7f9;
 $grey-300: #f4f7fa;
 $grey-200: #f8fafc;
+$grey-100: rgb(241 ,245, 249);
 
 $green-500: #76db9b;
 
+$blue-650: #0284c7;
 $blue-600: #56bae8;
 $blue-500: #79bee1;
 
@@ -43,4 +48,5 @@ $cl-title-grey: $grey-600;
 $btn-outline-green: $green-500;
 $btn-primary: $blue-600;
 $btn-outline-primary: $blue-600;
-$btn-outline-grey: $grey-450;
+$btn-outline-grey: $grey-100;
+
