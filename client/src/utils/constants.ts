@@ -49,7 +49,7 @@ export const ICON_LIBARY = {
     i_size: "radix-icons:size",
     i_bag: "ph:bag",
     i_screen: "ic:outline-fit-screen",
-    i_plus: "ic:outline-plus",
+    i_plus: "akar-icons:plus",
     i_subtraction: "subway:subtraction-1",
     i_exit: "system-uicons:exit-left",
     i_help: "solar:help-line-duotone",

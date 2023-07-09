@@ -1,0 +1,23 @@
+.accordion {
+    @include box(100%, 100%);
+    &_title {
+        cursor: pointer;
+        padding: 0.8rem 1.6rem;
+        background-color: $title-accordin;
+        border-radius: 0.8rem;
+        @include flex(space-between, center);
+        @include text(1.6rem, 500, $cl-title-accordin);
+        span {
+            @include text(1.6rem, 500, $cl-title-accordin);
+        }
+        &:hover {
+            background-color: rgba(226, 232, 240, 0.6);
+            transition: 0.3s ease-in;
+        }
+    }
+    &_description {
+        @include text(1.4rem, 500, $cl-title-accordin);
+        margin-top: 1rem;
+        padding: 1.2rem 1.6rem;
+    }
+}

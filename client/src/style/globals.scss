@@ -6,10 +6,10 @@
 @import "./mixins";
 @import "./homepage";
 @import "./UI/button";
+@import "./UI/accordion";
 
 * {
     font-family: "Poppins", sans-serif;
     font-size: 62.5%;
     box-sizing: border-box;
-    margin: auto;
 }
