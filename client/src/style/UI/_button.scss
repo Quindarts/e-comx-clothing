@@ -1,12 +1,13 @@
 .btn {
-    width: 100%;
-    height: 100%;
     padding: 1.2rem 1.6rem;
     border: none;
     @include text(1.4rem, 500, $black);
     background-color: $white;
     &--basic {
         border: none;
+    }
+    &--sm{
+        padding: 0.8rem 1.6rem;
     }
     &_outline--green {
         padding: 0.4rem 0.8rem;
@@ -17,7 +18,6 @@
     }
     &_contain--black {
         background-color: $black;
-        padding: 1.2rem 4rem;
         border-radius: 9999px;
         @include text(1.4rem, 500, $white);
         &:hover {

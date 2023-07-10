@@ -1,0 +1,14 @@
+.dropdown {
+    border: 2px solid $grey-500;
+    border-radius: 2rem;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="6"><path d="M0 0l5 6 5-6H0z" fill="%23444444"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 2rem center;
+    padding-right: 20px;
+    @include text(1.6rem, 400, $black);
+    background-color: white;
+    padding: 0.8rem 4rem 0.8rem 1.2rem;
+}

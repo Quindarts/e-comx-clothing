@@ -11,7 +11,7 @@ function Accordion(props: AccordionPropsType) {
     const handleOpen = () => {
         setIsOpen(!isOpen);
     };
-    const { title, children, className, ...rest } = props;
+    const { title, children, className = "", ...rest } = props;
     return (
         <div {...rest} className={`${className} accordion`}>
             <div onClick={handleOpen} className="accordion_title">

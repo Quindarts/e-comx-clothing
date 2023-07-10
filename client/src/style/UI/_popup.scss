@@ -1,0 +1,79 @@
+.popup_desktop {
+    position: relative;
+    &_header {
+        &--list {
+            label,span,
+            svg {
+                text-align: center;
+                @include text(1.6rem, 500, $black);
+            }
+            svg {
+                margin-top: 0.7rem;
+            }
+        }
+    }
+    &_main--list-- {
+        display: none;
+        opacity: 0;
+    }
+    &_main--footer {
+        @include position(absolute, calc(100% - 8rem), 0, 0, 0);
+        background-color: $grey-300;
+        border-radius: 0 0 1.6rem 1.6rem;
+    }
+    &_main--list--active {
+        z-index: 1;
+        opacity: 1;
+        display: block;
+        animation: showPopup 0.2s ease-in;
+        @include position(absolute, 5rem, 0, 0, 1rem);
+        @include box(38.4rem, auto);
+        min-height: 38.2rem;
+        font-size: 1.6rem;
+        background-color: $white;
+        border-radius: 1.6rem;
+        padding: 2.4rem 2rem;
+        border: 1px solid $grey-500;
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+            0 8px 10px -6px rgba(0, 0, 0, 0.1);
+
+        .checkbox_item {
+            margin-bottom: 2rem;
+            @include text(2.8rem, 500, $black);
+            span {
+                margin-top: 0.5rem;
+            }
+            input {
+                cursor: pointer;
+                appearance: none;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                border: 1px solid $grey-700;
+                background-color: $white;
+                border-radius: 0.5rem;
+                @include box(3rem, 3rem);
+                &:checked::before {
+                    content: "\2714";
+                    color: $white;
+                }
+                &:checked {
+                    background-color: $grey-700;
+                }
+            }
+        }
+    }
+}
+@keyframes showPopup {
+    0% {
+        opacity: 0;
+        height: 0;
+    }
+    65% {
+        opacity: 0.8;
+        height: 85%;
+    }
+    100% {
+        opacity: 1;
+        height: 100%;
+    }
+}
