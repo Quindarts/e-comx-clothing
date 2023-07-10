@@ -1,0 +1,21 @@
+.textArea {
+    display: flex;
+    flex-direction: column;
+    label {
+        @include text(1.6rem, 600, $black);
+        margin-bottom: 1rem;
+    }
+    textarea {
+        outline: none;
+        min-height: 4rem;
+        padding: 1.2rem 1.6rem;
+        border-radius: 1.6rem;
+        @include text(1.6rem, 400, $grey-700);
+        border: 1px solid $grey-650;
+        &:focus {
+            border: 2px solid $blue-650;
+            box-shadow: 1px 1px 1px 1px $blue-500;
+            transition: 0.1s ease-in;
+        }
+    }
+}

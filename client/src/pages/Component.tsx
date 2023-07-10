@@ -5,6 +5,7 @@ import Accordion from "components/UI/Accordion";
 import Dropdown from "components/UI/Dropdown";
 import PopupDesktop from "components/UI/PopupDesktop";
 import Textfield from "components/UI/Textfield";
+import TextArea from "components/UI/TextArea";
 function Component() {
     const listDrop = ["Ho Chi Minh", "Ha Nam", "Hue", "Ha Noi"];
     return (
@@ -77,6 +78,10 @@ function Component() {
             <h2 className="text-[2rem] my-2">TextField</h2>
             <div className="">
                 <Textfield className="w-[25rem]" type="text" label="Confirm password"/>
+            </div>
+            <h2 className="text-[2rem] my-2">TextArea</h2>
+            <div className="">
+                <TextArea className="w-[30rem]" label="Message"/>
             </div>
         </div>
     );
