@@ -4,6 +4,7 @@ import { Icon } from "@iconify/react";
 import Accordion from "components/UI/Accordion";
 import Dropdown from "components/UI/Dropdown";
 import PopupDesktop from "components/UI/PopupDesktop";
+import Textfield from "components/UI/Textfield";
 function Component() {
     const listDrop = ["Ho Chi Minh", "Ha Nam", "Hue", "Ha Noi"];
     return (
@@ -73,9 +74,9 @@ function Component() {
                     list={PRODUCT_SIZE}
                 />
             </div>
-            <h2 className="text-[2rem] my-2">Popup Mobile</h2>
+            <h2 className="text-[2rem] my-2">TextField</h2>
             <div className="">
-                
+                <Textfield className="w-[25rem]" type="text" label="Confirm password"/>
             </div>
         </div>
     );
