@@ -1,0 +1,18 @@
+.input_quantity {
+    @include text(1.6rem, 400, $black);
+    min-width: 14rem;
+    background-color: $grey-450;
+    padding: 1.2rem 0.8rem;
+    border-radius: 9999px;
+    input {
+        background-color: $grey-450;
+        text-align: center;
+        width: 3rem;
+        outline: none;
+    }
+    button:hover {
+        background-color: $grey-400;
+        transition: 0.3s ease-in;
+        border: 1px solid $grey-700;
+    }
+}

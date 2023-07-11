@@ -6,10 +6,11 @@ import Dropdown from "components/UI/Dropdown";
 import PopupDesktop from "components/UI/PopupDesktop";
 import Textfield from "components/UI/Textfield";
 import TextArea from "components/UI/TextArea";
+import InputQuantity from "components/UI/InputQuantity";
 function Component() {
     const listDrop = ["Ho Chi Minh", "Ha Nam", "Hue", "Ha Noi"];
     return (
-        <div className="m-1">
+        <div className="mx-5">
             <h1 className="text-[3rem] font-bold">Component:</h1>
             <h2 className="text-[2rem] my-2">Button</h2>
             <div>
@@ -77,11 +78,19 @@ function Component() {
             </div>
             <h2 className="text-[2rem] my-2">TextField</h2>
             <div className="">
-                <Textfield className="w-[25rem]" type="text" label="Confirm password"/>
+                <Textfield
+                    className="w-[25rem]"
+                    type="text"
+                    label="Confirm password"
+                />
             </div>
             <h2 className="text-[2rem] my-2">TextArea</h2>
             <div className="">
-                <TextArea className="w-[30rem]" label="Message"/>
+                <TextArea className="w-[30rem]" label="Message" />
+            </div>
+            <h2 className="text-[2rem] my-2">InputQuantity</h2>
+            <div className="">
+                <InputQuantity className="w-[5rem]"/>
             </div>
         </div>
     );
