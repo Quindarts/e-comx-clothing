@@ -12,6 +12,7 @@ import Toast from "components/UI/Toast";
 import { useState } from "react";
 import { VariantType, useSnackbar } from "notistack";
 import { useToast } from "hooks/useToast";
+import { Box, CircularProgress, LinearProgress } from "@mui/material";
 function Component() {
     const listDrop = ["Ho Chi Minh", "Ha Nam", "Hue", "Ha Noi"];
 
@@ -149,6 +150,10 @@ function Component() {
                     Show error snackbar
                 </Button>
             </div>
+            <h2 className="text-[2rem] my-2">Loading</h2>
+            <Button variant="contain" color="black">
+                <CircularProgress color="inherit" />
+            </Button>
         </div>
     );
 }
