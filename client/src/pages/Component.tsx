@@ -12,7 +12,8 @@ import Toast from "components/UI/Toast";
 import { useState } from "react";
 import { VariantType, useSnackbar } from "notistack";
 import { useToast } from "hooks/useToast";
-import { Box, CircularProgress, LinearProgress } from "@mui/material";
+import {  CircularProgress } from "@mui/material";
+import CardProduct from "components/UI/CardProduct";
 function Component() {
     const listDrop = ["Ho Chi Minh", "Ha Nam", "Hue", "Ha Noi"];
 
@@ -154,6 +155,10 @@ function Component() {
             <Button variant="contain" color="black">
                 <CircularProgress color="inherit" />
             </Button>
+            <h2 className="text-[2rem] my-2">Card</h2>
+            <div className="">
+                <CardProduct />
+            </div>
         </div>
     );
 }

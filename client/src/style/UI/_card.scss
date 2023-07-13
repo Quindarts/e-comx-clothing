@@ -1,0 +1,75 @@
+.card {
+    @include box(21.6rem, 100%);
+    max-width: 31rem;
+    min-width: 29.6rem;
+    margin-right: 1.6rem;
+    position: relative;
+    &_image {
+        display: block;
+        background-color: $grey-400;
+        border-radius: 2.4rem;
+        position: relative;
+        cursor: pointer;
+        &:hover .overlay {
+            visibility: visible;
+            animation: imghv_ani 0.2s ease-in;
+        }
+        .overlay {
+            visibility: hidden;
+            transition: all 0.3s linear;
+            position: absolute;
+            bottom: 1rem;
+            padding: 0 2rem;
+            width: 100%;
+            height: auto;
+            button {
+                @include box(11.7rem, 3.2rem);
+                padding: 0.2rem;
+                font-size: 1.2rem;
+                font-weight: 400 !important;
+            }
+        }
+        .btn_liked {
+            position: absolute;
+            right: 1rem;
+            top: 1rem;
+            &:hover svg {
+                color: $red;
+                transition: 0.2s ease-in;
+            }
+        }
+    }
+    &_content {
+        position: relative;
+        padding: 2rem 1rem 1rem 1rem;
+        width: 100%;
+        height: 13.4rem;
+        h1 {
+            @include text(16px, 600, $black);
+        }
+        @include text(4rem, 400, $grey-600);
+        &--price_reviews {
+            cursor: pointer;
+            button {
+                @include box(6rem, 3rem);
+                svg {
+                    @include text(1.7rem, 500, $green-500);
+                }
+            }
+            span svg {
+                @include text(1.8rem, 600, $yellow-500);
+            }
+        }
+    }
+}
+@keyframes imghv_ani {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+
+        opacity: 1;
+    }
+}

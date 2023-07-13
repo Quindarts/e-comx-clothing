@@ -35,7 +35,7 @@ export const ICON_LIBARY = {
     i_cart: "fluent:cart-24-regular",
     i_arrow_left: "cil:arrow-left",
     i_arrow_right: "bi:arrow-right",
-    i_heart: "uil:heart",
+    i_heart: "ion:heart",
     i_dollar: "healthicons:dollar",
     i_clock: "mdi:clock-outline",
     i_setting: "uiw:setting-o",

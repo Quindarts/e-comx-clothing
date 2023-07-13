@@ -1,6 +1,6 @@
 .toast div {
     background-color: $white !important;
-    @include text(2rem, 500, $white);
+    @include text(2rem, 500, $black);
 }
 .notistack-Snackbar div {
     font-size: 1.6rem;

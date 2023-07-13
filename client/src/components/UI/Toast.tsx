@@ -19,7 +19,7 @@ function Toast(props: ToastPropsType) {
                 autoHideDuration={2000}
                 onClose={handleClose}
                 message={
-                    <div className="bg-white text-[3rem]">Helloo world</div>
+                    <div className="bg-white text-[3rem]">Add this to cart</div>
                 }
                 action={
                     <button onClick={handleClose}>
