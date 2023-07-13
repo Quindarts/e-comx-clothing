@@ -9,7 +9,6 @@ interface ModalPropsType extends React.HTMLAttributes<HTMLDivElement> {
 }
 function Modal(props: ModalPropsType) {
     const { children, open, onClose, ...rest } = props;
-    console.log(open);
 
     return (
         <div {...rest} className={`modal_product ${open ? "open" : ""}`}>

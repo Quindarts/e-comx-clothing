@@ -1,4 +1,5 @@
 import { Icon } from "@iconify/react";
+import usePopup from "hooks/usePopup";
 import React, { useEffect, useRef, useState } from "react";
 import { ICON_LIBARY } from "utils/constants";
 import Button from "./Button";
@@ -12,21 +13,7 @@ interface PopupDesktopPropsType {
     list?: Array<String>;
 }
 function PopupDesktop(props: PopupDesktopPropsType) {
-    const [active, setActive] = useState(false);
-    const handleActive = () => {
-        setActive(!active);
-    };
-    const menuRef = useRef() as React.MutableRefObject<HTMLDivElement>;
-    useEffect(() => {
-        const handleUnActive = (e: any) => {
-            if (!menuRef.current.contains(e.target))
-                setActive(false);
-        };
-        document.addEventListener("mousedown", handleUnActive);
-        return () => {
-            document.removeEventListener("mousedown", handleUnActive);
-        };
-    }, []);
+    const { handleActive, active, menuRef } = usePopup();
     const {
         className = "",
         list,
@@ -66,7 +53,6 @@ function PopupDesktop(props: PopupDesktopPropsType) {
                 )}
             </div>
             <div
-                
                 className={`popup_desktop_main--${type}--${
                     active ? "active" : ""
                 } `}
@@ -88,7 +74,9 @@ function PopupDesktop(props: PopupDesktopPropsType) {
                         </div>
                     ))}
                 </div>
-                <div className="popup_desktop_main--footer flex justify-between items-center px-5">
+                <div
+                    className={`popup_desktop_main--footer--${type} flex justify-between items-center px-5`}
+                >
                     <Button
                         variant="contain"
                         color="white"

@@ -10,11 +10,14 @@
         @include text(2.6rem, 400, $grey-650);
     }
     &_overlay {
+        z-index: 20;
         @include position(fixed, 0, 0, 0, 0);
         @include box(100%, 100%);
         background-color: rgba(0, 0, 0, 0.4);
     }
     &_body {
+        z-index: 20;
+
         .close_modal {
             position: absolute;
             right: 0;
@@ -38,7 +41,6 @@
         left: 50%;
         border-radius: 1.6rem;
         padding: 3.2rem;
-        z-index: 1;
         background-color: $white;
     }
 }
@@ -55,9 +57,11 @@
 }
 @keyframes close-animate {
     0% {
+        scale: 1;
         opacity: 1;
     }
     100% {
+        scale: 0;
         opacity: 0;
     }
 }

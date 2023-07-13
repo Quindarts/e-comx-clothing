@@ -16,6 +16,8 @@ export const ROUTE = {
     FORGOT_PASSWORD: "/auth/forgot-pass",
 
     //OTHERS
+    MEN: "/collection/men",
+    WOMAN: "collection/woman",
     ABOUT: "/about",
     CONTACT: "/contact",
     BLOG: "/blog",
@@ -62,4 +64,8 @@ export const ICON_LIBARY = {
     i_payment: "fluent:payment-16-regular",
     i_tick: "mdi:tick",
     i_close_modal: "material-symbols:close",
+    i_list: "ph:list",
+    i_order: "icon-park-outline:transaction-order",
+    i_heart_outline: "solar:heart-linear",
+    i_light_buld: "heroicons:light-bulb",
 };
