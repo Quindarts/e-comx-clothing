@@ -60,4 +60,5 @@ export const ICON_LIBARY = {
     i_shipping: "la:shipping-fast",
     i_payment: "fluent:payment-16-regular",
     i_tick: "mdi:tick",
+    i_close_modal: "material-symbols:close",
 };

@@ -16,12 +16,16 @@ function PopupDesktop(props: PopupDesktopPropsType) {
     const handleActive = () => {
         setActive(!active);
     };
-    const menuRef = useRef(null);
+    const menuRef = useRef() as React.MutableRefObject<HTMLDivElement>;
     useEffect(() => {
         const handleUnActive = (e: any) => {
-            if (e.target.contains(menuRef?.current)) setActive(false);
+            if (!menuRef.current.contains(e.target))
+                setActive(false);
         };
         document.addEventListener("mousedown", handleUnActive);
+        return () => {
+            document.removeEventListener("mousedown", handleUnActive);
+        };
     }, []);
     const {
         className = "",
@@ -33,7 +37,7 @@ function PopupDesktop(props: PopupDesktopPropsType) {
         ...rest
     } = props;
     return (
-        <div {...rest} className={`${className} popup_desktop`}>
+        <div ref={menuRef} {...rest} className={`${className} popup_desktop`}>
             <div
                 className={`popup_desktop_header--${
                     type === "icon" ? "icon" : type
@@ -62,12 +66,12 @@ function PopupDesktop(props: PopupDesktopPropsType) {
                 )}
             </div>
             <div
-                ref={menuRef}
+                
                 className={`popup_desktop_main--${type}--${
                     active ? "active" : ""
                 } `}
             >
-                <div ref={menuRef} className="popup_desktop_main--content">
+                <div className="popup_desktop_main--content">
                     {list?.map((item: String, index: number) => (
                         <div
                             key={index}
@@ -84,10 +88,7 @@ function PopupDesktop(props: PopupDesktopPropsType) {
                         </div>
                     ))}
                 </div>
-                <div
-                    ref={menuRef}
-                    className="popup_desktop_main--footer flex justify-between items-center px-5"
-                >
+                <div className="popup_desktop_main--footer flex justify-between items-center px-5">
                     <Button
                         variant="contain"
                         color="white"
@@ -108,4 +109,4 @@ function PopupDesktop(props: PopupDesktopPropsType) {
     );
 }
 
-export default PopupDesktop;
+export default React.memo(PopupDesktop);

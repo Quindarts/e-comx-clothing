@@ -7,8 +7,16 @@ import PopupDesktop from "components/UI/PopupDesktop";
 import Textfield from "components/UI/Textfield";
 import TextArea from "components/UI/TextArea";
 import InputQuantity from "components/UI/InputQuantity";
+import Modal from "components/UI/Modal";
+import { useState } from "react";
 function Component() {
     const listDrop = ["Ho Chi Minh", "Ha Nam", "Hue", "Ha Noi"];
+    const [openModal, setOpenModal] = useState<boolean>(false);
+    const handleCloseModal = () => {
+        setOpenModal(!openModal);
+    };
+    console.log(openModal);
+    
     return (
         <div className="mx-5">
             <h1 className="text-[3rem] font-bold">Component:</h1>
@@ -90,7 +98,20 @@ function Component() {
             </div>
             <h2 className="text-[2rem] my-2">InputQuantity</h2>
             <div className="">
-                <InputQuantity className="w-[5rem]"/>
+                <InputQuantity className="w-[5rem]" />
+            </div>
+            <h2 className="text-[2rem] my-2">Modal product</h2>
+            <div className="">
+                <Button
+                    onClick={() => setOpenModal(true)}
+                    variant="contain"
+                    color="black"
+                >
+                    Open Modal
+                </Button>
+                <Modal onClose={handleCloseModal} open={openModal}>
+                    Hello world
+                </Modal>
             </div>
         </div>
     );
