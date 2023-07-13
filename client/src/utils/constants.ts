@@ -8,6 +8,7 @@ export const ROUTE = {
     CHECKOUT: "/cart",
     NOT_FOUND: "/not-found",
     PRODUCT_DETAIL: "/product-detail",
+    COMPONENT: "/component",
 
     //Authentication
     LOGIN: "/auth/login",

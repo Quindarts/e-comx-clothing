@@ -32,7 +32,7 @@ function Component() {
     };
 
     return (
-        <div className="mx-5 my-5">
+        <div className="w-[100%] my-5">
             <h1 className="text-[3rem] font-bold">Component:</h1>
             <h2 className="text-[2rem] my-2">Button</h2>
             <div>
