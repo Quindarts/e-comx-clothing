@@ -10,7 +10,7 @@
         @include text(2.6rem, 400, $grey-650);
     }
     &_overlay {
-        @include position(absolute, 0, 0, 0, 0);
+        @include position(fixed, 0, 0, 0, 0);
         @include box(100%, 100%);
         background-color: rgba(0, 0, 0, 0.4);
     }

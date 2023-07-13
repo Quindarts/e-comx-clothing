@@ -8,17 +8,29 @@ import Textfield from "components/UI/Textfield";
 import TextArea from "components/UI/TextArea";
 import InputQuantity from "components/UI/InputQuantity";
 import Modal from "components/UI/Modal";
+import Toast from "components/UI/Toast";
 import { useState } from "react";
+import { VariantType, useSnackbar } from "notistack";
+import { useToast } from "hooks/useToast";
 function Component() {
     const listDrop = ["Ho Chi Minh", "Ha Nam", "Hue", "Ha Noi"];
+
+    //[MODAL]
     const [openModal, setOpenModal] = useState<boolean>(false);
     const handleCloseModal = () => {
         setOpenModal(!openModal);
     };
-    console.log(openModal);
-    
+    //[TOAST]
+    const { openToast, handleClickToast, handleCloseToast } = useToast();
+
+    //[TOAST MESS]
+    const { enqueueSnackbar } = useSnackbar();
+    const handleClickVariant = (variant: VariantType) => () => {
+        enqueueSnackbar("This is a success message!", { variant });
+    };
+
     return (
-        <div className="mx-5">
+        <div className="mx-5 my-5">
             <h1 className="text-[3rem] font-bold">Component:</h1>
             <h2 className="text-[2rem] my-2">Button</h2>
             <div>
@@ -100,7 +112,7 @@ function Component() {
             <div className="">
                 <InputQuantity className="w-[5rem]" />
             </div>
-            <h2 className="text-[2rem] my-2">Modal product</h2>
+            <h2 className="text-[2rem] my-2">Modal</h2>
             <div className="">
                 <Button
                     onClick={() => setOpenModal(true)}
@@ -112,6 +124,30 @@ function Component() {
                 <Modal onClose={handleCloseModal} open={openModal}>
                     Hello world
                 </Modal>
+            </div>
+            <h2 className="text-[2rem] my-2">Toast</h2>
+            <div className="">
+                <Button
+                    onClick={handleClickToast}
+                    variant="contain"
+                    color="primary"
+                >
+                    Toast products
+                </Button>
+                <Toast
+                    value={"Login success"}
+                    open={openToast}
+                    handleClose={handleCloseToast}
+                />
+                <Button onClick={handleClickVariant("success")}>
+                    Show success snackbar
+                </Button>
+                <Button onClick={handleClickVariant("warning")}>
+                    Show warning snackbar
+                </Button>
+                <Button onClick={handleClickVariant("error")}>
+                    Show error snackbar
+                </Button>
             </div>
         </div>
     );
