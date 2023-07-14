@@ -7,6 +7,7 @@ import { Icon } from "@iconify/react";
 import Modal from "components/UI/Modal";
 import PopupDesktop from "components/UI/PopupDesktop";
 import PopupUser from "./PopupUser";
+import PopupCart from "./PopupCart";
 function Header() {
     const [openModal, setOpenModal] = useState<boolean>(false);
     const handleCloseModal = () => {
@@ -35,13 +36,11 @@ function Header() {
                         <Link to={ROUTE.BLOG}>Blog</Link>
                     </div>
                     <div className="control_header flex">
-                        <Button size="icon">
+                        <Button className="control_header--item" size="icon">
                             <Icon icon={ICON_LIBARY.i_search} />
                         </Button>
                         <PopupUser />
-                        <Button size="icon">
-                            <Icon icon={ICON_LIBARY.i_cart} />
-                        </Button>
+                        <PopupCart />
                     </div>
                 </div>
             </header>

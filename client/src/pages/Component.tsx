@@ -12,8 +12,9 @@ import Toast from "components/UI/Toast";
 import { useState } from "react";
 import { VariantType, useSnackbar } from "notistack";
 import { useToast } from "hooks/useToast";
-import {  CircularProgress } from "@mui/material";
+import { CircularProgress } from "@mui/material";
 import CardProduct from "components/UI/CardProduct";
+import CardOrder from "components/UI/CardOrder";
 function Component() {
     const listDrop = ["Ho Chi Minh", "Ha Nam", "Hue", "Ha Noi"];
 
@@ -67,7 +68,6 @@ function Component() {
                     <Icon icon={ICON_LIBARY.i_heart} />
                 </Button>
             </div>
-
             <h2 className="text-[2rem] my-2">Accordion</h2>
             <div className="">
                 <Accordion title="Description">
@@ -154,8 +154,12 @@ function Component() {
             <h2 className="text-[2rem] my-2">Loading</h2>
             <Button variant="contain" color="black">
                 <CircularProgress color="inherit" />
-            </Button>
-            <h2 className="text-[2rem] my-2">Card</h2>
+            </Button>{" "}
+            <h2 className="text-[2rem] my-2">Card Order</h2>
+            <div className="">
+                <CardOrder />
+            </div>
+            <h2 className="text-[2rem] my-2">Card product</h2>
             <div className="">
                 <CardProduct />
             </div>

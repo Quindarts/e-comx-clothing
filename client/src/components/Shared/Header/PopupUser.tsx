@@ -3,7 +3,7 @@ import Button from "components/UI/Button";
 import usePopup from "hooks/usePopup";
 import React from "react";
 import { ICON_LIBARY } from "utils/constants";
-import avt from "assets/image/avt.webp";
+import avt from "assets/image/avt.jpg";
 import { Link } from "react-router-dom";
 import Switch from "@mui/material/Switch";
 function PopupUser() {
@@ -15,7 +15,11 @@ function PopupUser() {
     return (
         <div ref={menuRef} className="popup_user">
             <div>
-                <Button onClick={handleActive} size="icon">
+                <Button
+                    className="control_header--item"
+                    onClick={handleActive}
+                    size="icon"
+                >
                     <Icon icon={ICON_LIBARY.i_user} />
                 </Button>
             </div>

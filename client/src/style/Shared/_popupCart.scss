@@ -1,0 +1,65 @@
+.popup_cart {
+    position: relative;
+    &_main-- {
+        display: none;
+        opacity: 0;
+    }
+    &_main--active {
+        z-index: 1;
+        opacity: 1;
+        display: block;
+        animation: showPopup 0.2s ease-in;
+        position: absolute;
+        top: 5rem;
+        right: 1rem;
+        @include box(44.8rem, auto);
+        min-height: 61.6rem;
+        font-size: 1.6rem;
+        background-color: $white;
+        border-radius: 1.6rem;
+        border: 1px solid $grey-500;
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+            0 8px 10px -6px rgba(0, 0, 0, 0.1);
+        .popup_cart {
+            &--content {
+                padding: 2rem;
+
+                h1 {
+                    @include text(2rem, 600, $grey-800);
+                }
+            }
+            &--footer {
+                padding: 2rem;
+                height: 15.8rem;
+                background-color: $grey-400;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                border-radius: 0 0 1.6rem 1.6rem;
+                .total_price,
+                h2 {
+                    @include text(1.6rem, 600, $grey-800);
+                }
+                span {
+                    @include text(1.4rem, 400, $grey-650);
+                }
+            }
+        }
+    }
+}
+
+@keyframes showPopup {
+    0% {
+        opacity: 0;
+        height: 0;
+    }
+    65% {
+        opacity: 0.8;
+        height: 85%;
+    }
+    100% {
+        opacity: 1;
+        height: 100%;
+    }
+}
