@@ -1,9 +1,8 @@
 .modal_product {
     visibility: hidden;
-    opacity: 0;
-    animation: open-animate 0.5s ease-in;
+    animation: open-animate 0.2s ease-in;
     transition: all 0.2s linear;
-    width: 0;
+    z-index: 9999;
     &.open {
         visibility: visible;
         opacity: 1;
@@ -15,7 +14,29 @@
         @include box(100%, 100%);
         background-color: rgba(0, 0, 0, 0.4);
     }
-    &_body {
+    &_body--left{
+        z-index: 20;
+        @include position(fixed);
+        @include box(100%, 100%);
+        width: 44.8rem;
+        height: 100%;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        padding: 2.4rem 2rem;
+        background-color: $white;
+        .close_modal {
+            position: absolute;
+            right: 0;
+            top: 0;
+            border-radius: 1.6rem;
+            svg {
+                font-size: 2rem;
+            }
+        }
+
+    }
+    &_body--center{
         z-index: 20;
 
         .close_modal {
@@ -46,12 +67,16 @@
 }
 @keyframes open-animate {
     0% {
-        scale: 0;
         opacity: 0;
     }
+    25%{
+        opacity: 0.25;
+    }
+    50%{
+        opacity: 0.5;
 
+    }
     100% {
-        scale: 1;
         opacity: 1;
     }
 }

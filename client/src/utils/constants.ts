@@ -68,4 +68,9 @@ export const ICON_LIBARY = {
     i_order: "icon-park-outline:transaction-order",
     i_heart_outline: "solar:heart-linear",
     i_light_buld: "heroicons:light-bulb",
+    i_facebook: "logos:facebook",
+    i_twitter: "ant-design:twitter-circle-filled",
+    i_youtube: "entypo-social:youtube-with-circle",
+    i_telegram: "logos:telegram",
+    i_sun: "ph:sun",
 };

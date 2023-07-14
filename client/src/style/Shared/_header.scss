@@ -6,7 +6,7 @@ header {
     right: 0;
     position: fixed;
     top: 0;
-    z-index: 19;
+    z-index: 1;
 
     .contain_header {
         width: 100%;
@@ -43,6 +43,14 @@ header {
                 display: none;
             }
         }
+        #desk_search {
+            visibility: hidden;
+
+            @include respond(desktop) {
+                visibility: visible;
+                
+            }
+        }
         .navbar {
             display: none;
             @include text(2.5rem, 500, $grey-800);
@@ -72,6 +80,23 @@ header {
                     transition: 0.2s ease-in;
                 }
             }
+        }
+    }
+}
+.header_main_mobile {
+    p {
+        @include text(1.4rem, 400, $grey-800);
+    }
+    .search_mobile {
+        padding: 3rem;
+        border-bottom: 1px solid $grey-450;
+    }
+    .navbar_mobile {
+        padding: 2.4rem 0.8rem;
+        border-bottom: 1px solid $grey-450;
+        a {
+            padding: 1rem 1.6rem;
+            @include text(1.6rem, 500, $grey-800);
         }
     }
 }

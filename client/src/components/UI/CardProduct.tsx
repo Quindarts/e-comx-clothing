@@ -75,7 +75,7 @@ function CardProduct() {
                     </div>
                 </div>
             </div>
-            <Modal onClose={handleCloseModal} open={openModal}>
+            <Modal type='center' onClose={handleCloseModal} open={openModal}>
                 Hello world
             </Modal>
             <Toast

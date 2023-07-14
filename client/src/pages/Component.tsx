@@ -123,7 +123,11 @@ function Component() {
                 >
                     Open Modal
                 </Button>
-                <Modal onClose={handleCloseModal} open={openModal}>
+                <Modal
+                    type="center"
+                    onClose={handleCloseModal}
+                    open={openModal}
+                >
                     Hello world
                 </Modal>
             </div>
