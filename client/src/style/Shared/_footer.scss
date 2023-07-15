@@ -1,0 +1,58 @@
+footer {
+    padding: 11.2rem 0 9.6rem 0;
+    @include text(2.4rem, 400, $grey-800);
+    border-top: 2px solid $grey-450;
+    .list_footer {
+        width: calc(50% - 3rem);
+        @include respond(tablet) {
+            width: calc(20% - 3rem);
+        }
+        &--logo {
+            width: 100%;
+            display: flex;
+            gap: 5.5rem;
+            margin-bottom: 3rem;
+            align-items: center;
+            @include respond(desktop) {
+                display: block;
+                width: calc(20% - 3rem);
+            }
+            .list_footer_link {
+                flex: 1;
+                display: flex;
+                gap: 1rem;
+                align-items: flex-start;
+                margin-top: 0;
+                span {
+                    display: none;
+                    @include respond(desktop) {
+                        display: block;
+                        @include text(1.4rem, 400, $grey-800);
+                        margin-top: 0.3rem;
+                    }
+                }
+                @include respond(desktop) {
+                    display: block;
+                    margin-top: 3rem;
+                }
+            }
+        }
+        h2 {
+            @include text(1.4rem, 600, $grey-800);
+        }
+        ul {
+            margin-top: 2rem;
+            li {
+                margin-top: 1.6rem;
+                cursor: pointer;
+                @include text(1.4rem, 400, $grey-800);
+                &:hover {
+                    color: $black;
+                    font-weight: 600;
+                    margin-left: 0.1rem;
+                    transition: 0.2s ease-in;
+                }
+            }
+        }
+    }
+}

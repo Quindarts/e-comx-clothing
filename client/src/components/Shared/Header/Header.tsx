@@ -5,7 +5,6 @@ import { ICON_LIBARY, ROUTE } from "utils/constants";
 import Button from "components/UI/Button";
 import { Icon } from "@iconify/react";
 import Modal from "components/UI/Modal";
-import PopupDesktop from "components/UI/PopupDesktop";
 import PopupUser from "./PopupUser";
 import PopupCart from "./PopupCart";
 import Textfield from "components/UI/Textfield";
@@ -37,7 +36,11 @@ function Header() {
                         <Link to={ROUTE.BLOG}>Blog</Link>
                     </div>
                     <div className="control_header flex">
-                        <Button id="desk_search" className="control_header--item" size="icon">
+                        <Button
+                            id="desk_search"
+                            className="control_header--item"
+                            size="icon"
+                        >
                             <Icon icon={ICON_LIBARY.i_search} />
                         </Button>
                         <PopupUser />
@@ -51,41 +54,40 @@ function Header() {
                         <Link to={ROUTE.COMPONENT}>
                             <img src={logo} alt="logo" />
                         </Link>
-                        <div className="mt-[2rem]">
-                            <p>
-                                Discover the most outstanding articles on all
-                                topics of life. Write your stories and share
-                                them
-                            </p>
-                            <div className="flex justify-between mt-5 ">
-                                <div className="flex text-[5rem] gap-5">
-                                    <Icon icon={ICON_LIBARY.i_facebook} />
-                                    <Icon
-                                        icon={ICON_LIBARY.i_twitter}
-                                        color="#33aae0"
-                                    />
-                                    <Icon
-                                        icon={ICON_LIBARY.i_youtube}
-                                        color="#da0000"
-                                    />
-                                    <Icon icon={ICON_LIBARY.i_telegram} />
-                                </div>
-                                <Button size="icon">
-                                    <Icon icon={ICON_LIBARY.i_sun} />
-                                </Button>
+                    </div>
+                    <div className="mt-[2rem]">
+                        <p>
+                            Discover the most outstanding articles on all topics
+                            of life. Write your stories and share them
+                        </p>
+                        <div className="flex justify-between mt-5 ">
+                            <div className="flex text-[5rem] gap-5">
+                                <Icon icon={ICON_LIBARY.i_facebook} />
+                                <Icon
+                                    icon={ICON_LIBARY.i_twitter}
+                                    color="#33aae0"
+                                />
+                                <Icon
+                                    icon={ICON_LIBARY.i_youtube}
+                                    color="#da0000"
+                                />
+                                <Icon icon={ICON_LIBARY.i_telegram} />
                             </div>
+                            <Button size="icon">
+                                <Icon icon={ICON_LIBARY.i_sun} />
+                            </Button>
                         </div>
-                        <div className=" search_mobile">
-                            <Textfield placeholder="Type and press enter" />
-                        </div>
-                        <div className="navbar_mobile text-[2rem] flex flex-col">
-                            <Link to={ROUTE.MEN}>MEN</Link>
-                            <Link to={ROUTE.WOMAN}>WOMAN</Link>
-                            <Link to={ROUTE.COLLECTION}>COLLECTION</Link>
-                            <Link to={ROUTE.ABOUT}>ABOUT</Link>
-                            <Link to={ROUTE.CONTACT}>CONTACT</Link>
-                            <Link to={ROUTE.BLOG}>BLOG</Link>
-                        </div>
+                    </div>
+                    <div className=" search_mobile">
+                        <Textfield placeholder="Type and press enter" />
+                    </div>
+                    <div className="navbar_mobile text-[2rem] flex flex-col">
+                        <Link to={ROUTE.MEN}>MEN</Link>
+                        <Link to={ROUTE.WOMAN}>WOMAN</Link>
+                        <Link to={ROUTE.COLLECTION}>COLLECTION</Link>
+                        <Link to={ROUTE.ABOUT}>ABOUT</Link>
+                        <Link to={ROUTE.CONTACT}>CONTACT</Link>
+                        <Link to={ROUTE.BLOG}>BLOG</Link>
                     </div>
                 </div>
             </Modal>
