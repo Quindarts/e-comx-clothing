@@ -5,7 +5,7 @@ import Button from "./Button";
 interface ModalPropsType extends React.HTMLAttributes<HTMLDivElement> {
     children: React.ReactNode;
     open: boolean;
-    type: "left" | "center";
+    type?: "left" | "center";
     onClose: () => void;
 }
 function Modal(props: ModalPropsType) {

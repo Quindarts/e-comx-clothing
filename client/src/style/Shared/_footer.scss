@@ -1,5 +1,20 @@
 footer {
-    padding: 11.2rem 0 9.6rem 0;
+    padding: 11.2rem 1.6rem 9.6rem 1.6rem;
+    margin-right: auto;
+    margin-left: auto;  
+    @include respond(large-mobile) {
+        max-width: 64rem;
+    }
+    @include respond(tablet) {
+        max-width: 76.8rem;
+    }
+    @include respond(desktop) {
+        max-width: 102.4rem;
+    }
+    @include respond(large-desktop) {
+        max-width: 128rem;
+        padding: 11.2rem 4rem 9.6rem 4rem;
+    }
     @include text(2.4rem, 400, $grey-800);
     border-top: 2px solid $grey-450;
     .list_footer {

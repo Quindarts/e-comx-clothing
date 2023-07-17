@@ -8,7 +8,9 @@ function Mainlayout() {
         <>
             <div className="main_layout">
                 <Header />
+                <div className="mt-[7.2rem]">
                 <Outlet />
+                </div>
                 <Footer />
             </div>
         </>

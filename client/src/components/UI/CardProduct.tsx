@@ -1,20 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 import img from "assets/image/prt1.webp";
 import Button from "./Button";
 import { Icon } from "@iconify/react";
 import { ICON_LIBARY } from "utils/constants";
-import Modal from "./Modal";
-import { useToast } from "hooks/useToast";
-import Toast from "./Toast";
-function CardProduct() {
-    //[MODAL]
-    const [openModal, setOpenModal] = useState<boolean>(false);
-    const handleCloseModal = () => {
-        setOpenModal(!openModal);
-    };
-    //[TOAST]
-    const { openToast, handleClickToast, handleCloseToast } = useToast();
-
+interface CardProductPropsType {
+    handleOpenModal: () => void;
+    handleClickToast: () => void;
+}
+function CardProduct(props: CardProductPropsType) {
+    const { handleClickToast, handleOpenModal } = props;
     return (
         <>
             <div className="card">
@@ -40,7 +34,7 @@ function CardProduct() {
                             className="flex items-center gap-2 justify-center"
                             variant="contain"
                             color="white"
-                            onClick={() => setOpenModal(true)}
+                            onClick={handleOpenModal}
                             style={{ boxShadow: "1px 1px 1px 1px grey" }}
                         >
                             <Icon
@@ -75,14 +69,6 @@ function CardProduct() {
                     </div>
                 </div>
             </div>
-            <Modal type='center' onClose={handleCloseModal} open={openModal}>
-                Hello world
-            </Modal>
-            <Toast
-                value={"Login success"}
-                open={openToast}
-                handleClose={handleCloseToast}
-            />
         </>
     );
 }

@@ -15,14 +15,17 @@ import { useToast } from "hooks/useToast";
 import { CircularProgress } from "@mui/material";
 import CardProduct from "components/UI/CardProduct";
 import CardOrder from "components/UI/CardOrder";
+import useModal from "hooks/useModal";
 function Component() {
     const listDrop = ["Ho Chi Minh", "Ha Nam", "Hue", "Ha Noi"];
 
-    //[MODAL]
-    const [openModal, setOpenModal] = useState<boolean>(false);
-    const handleCloseModal = () => {
-        setOpenModal(!openModal);
-    };
+    // //[MODAL]
+    // const [openModal, setOpenModal] = useState<boolean>(false);
+    // const handleCloseModal = () => {
+    //     setOpenModal(!openModal);
+    // };
+    const { openModal, handleCloseModal, handleOpenModal } = useModal();
+
     //[TOAST]
     const { openToast, handleClickToast, handleCloseToast } = useToast();
 
@@ -117,7 +120,7 @@ function Component() {
             <h2 className="text-[2rem] my-2">Modal</h2>
             <div className="">
                 <Button
-                    onClick={() => setOpenModal(true)}
+                    onClick={handleOpenModal}
                     variant="contain"
                     color="black"
                 >
@@ -164,9 +167,7 @@ function Component() {
                 <CardOrder />
             </div>
             <h2 className="text-[2rem] my-2">Card product</h2>
-            <div className="">
-                <CardProduct />
-            </div>
+            <div className=""></div>
         </div>
     );
 }

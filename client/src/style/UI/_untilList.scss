@@ -1,0 +1,27 @@
+.util_list_item {
+    width: 100%;
+    span {
+        border-radius: 9999px;
+        @include text(1.4rem, 600, $black);
+        padding: 0.4rem 1rem;
+        margin-top: 4rem;
+    }
+    img {
+        @include box(14rem, 14rem);
+    }
+    h1 {
+        @include text(1.6rem, 600, $black);
+        margin-top: 2rem;
+    }
+    p {
+        padding: 0 1rem;
+        @include text(1.4rem, 400, $grey-700);
+        margin-top: 2rem;
+    }
+    @include respond(large-mobile) {
+        width:calc(50% - 2rem);
+    }
+    @include respond(desktop) {
+        width: calc(25% - 2rem);
+    }
+}

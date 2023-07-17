@@ -1,19 +1,19 @@
 .main_layout {
     font-size: 1.6rem;
-    padding: 0 1.6rem 0 1.6rem;
+    // padding: 0 1.6rem 0 1.6rem;
     margin-right: auto;
     margin-left: auto;
-    @include respond(large-mobile){
-        max-width: 64rem;
-    }
-    @include respond(tablet){
-        max-width: 76.8rem;
-    }
-    @include respond(desktop){
-        max-width: 102.4rem;
-    }
-    @include respond(large-desktop){
-        max-width: 128rem;
-        padding: 0 4rem 0 4rem;
-    }
+    // @include respond(large-mobile){
+    //     max-width: 64rem;
+    // }
+    // @include respond(tablet){
+    //     max-width: 76.8rem;
+    // }
+    // @include respond(desktop){
+    //     max-width: 102.4rem;
+    // }
+    // @include respond(large-desktop){
+    //     max-width: 128rem;
+    //     padding: 0 4rem 0 4rem;
+    // }
 }

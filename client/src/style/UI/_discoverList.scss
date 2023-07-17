@@ -1,0 +1,39 @@
+.main_discover {
+    overflow-x: auto;
+    overflow-y: hidden;
+    max-width: 100%;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    .discover_list {
+        padding: 3.2rem;
+        position: relative;
+        border-radius: 1.2rem;
+        cursor: pointer;
+        &:hover{
+            box-shadow: 2px 2px 2px 2px $grey-400;
+            transition: 0.2s ease-in;
+        }
+        @include box(46.1rem, 26rem);
+        min-width: 46.1rem;
+        span {
+            @include text(1.4rem, 400, $grey-800);
+        }
+        h1 {
+            @include box(20rem, 6.4rem);
+
+            @include text(2.4rem, 600, $grey-800);
+        }
+        button {
+            margin-top: 5.6rem;
+        }
+        &--img img{
+            position: absolute;
+            right: 0;
+            @include box(24rem, 24rem);
+            object-fit: cover;
+        }
+    }
+}
