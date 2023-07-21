@@ -1,15 +1,50 @@
 import hsl1 from "assets/image/home/homeslide1.webp";
 import hsl2 from "assets/image/home/homeslide2.webp";
 import hsl3 from "assets/image/home/homeslide3.webp";
+
 import homehot1 from "assets/image/home/homeHot1.webp";
 import homehot2 from "assets/image/home/homeHot2.webp";
 import homehot3 from "assets/image/home/homeHot3.webp";
 import homehot4 from "assets/image/home/homeHot4.webp";
+
 import discoverimg1 from "assets/image/home/discoverimg1.webp";
 import discoverimg2 from "assets/image/home/discoverimg2.webp";
 import discoverimg3 from "assets/image/home/discoverimg3.webp";
 import discoverimg4 from "assets/image/home/discoverimg4.webp";
 
+import exploreimg1 from "assets/image/home/explore1.svg";
+import exploreimg2 from "assets/image/home/explore2.svg";
+import exploreimg3 from "assets/image/home/explore3.svg";
+import exploreimg4 from "assets/image/home/explore5.svg";
+import exploreimg5 from "assets/image/home/explore6.svg";
+import exploreimg6 from "assets/image/home/explore9.svg";
+
+import exploreItemimg1 from "assets/image/home/exploreItem1.webp";
+import exploreItemimg2 from "assets/image/home/exploreItem2.webp";
+import exploreItemimg3 from "assets/image/home/exploreItem3.webp";
+import exploreItemimg4 from "assets/image/home/exploreItem4.webp";
+import exploreItemimg5 from "assets/image/home/exploreItem5.webp";
+import exploreItemimg6 from "assets/image/home/exploreItem6.webp";
+
+import expertAside1 from "assets/image/home/expertAside1.webp";
+import expertAside2 from "assets/image/home/expertAside2.webp";
+import expertAside3 from "assets/image/home/expertAside3.webp";
+
+import expertItem1 from "assets/image/home/expertItem1.webp";
+import expertItem2 from "assets/image/home/expertItem2.webp";
+import expertItem3 from "assets/image/home/expertItem3.webp";
+import expertItem4 from "assets/image/home/expertItem4.webp";
+import expertItem5 from "assets/image/home/expertItem5.webp";
+import expertItem6 from "assets/image/home/expertItem6.webp";
+import expertItem7 from "assets/image/home/expertItem7.webp";
+import expertItem8 from "assets/image/home/expertItem8.webp";
+import expertItem9 from "assets/image/home/expertItem9.webp";
+
+import  blogAside  from 'assets/image/home/blogAside.webp';
+import avtBlog1 from "assets/image/home/avtUserBlog1.webp";
+import blogItem1 from "assets/image/home/blogItem1.webp";
+import blogItem2 from "assets/image/home/blogItem2.webp";
+import blogItem3 from "assets/image/home/blogItem3.webp";
 export const ROUTE = {
     //MAIN
     INDEX: "/",
@@ -86,6 +121,10 @@ export const ICON_LIBARY = {
     i_telegram: "logos:telegram",
     i_sun: "ph:sun",
     i_fire: "bi:fire",
+    i_dumbbells: "solar:dumbbells-outline",
+    i_crown: "lucide:crown",
+    i_jewelry:
+        "streamline:shopping-jewelry-diamond-2-diamond-money-payment-finance-wealth",
 };
 
 export const homeSlide = [hsl1, hsl2, hsl3];
@@ -148,5 +187,122 @@ export const UTIL_LIST = [
         img: homehot2,
         title: "Enjoy the product",
         desc: "Have fun and enjoy your 5-star quality products",
+    },
+];
+export const EXPLORE_LIST = [
+    {
+        category: "bags",
+        img: exploreItemimg1,
+        bgImg: "#eef2ff",
+        bgMain: exploreimg1,
+        productQuantity: "155",
+        title: "Backpack",
+    },
+    {
+        category: "shoes",
+        img: exploreItemimg2,
+        bgImg: "#f4f7fa",
+        bgMain: exploreimg2,
+        productQuantity: "22",
+        title: "Shoes",
+    },
+    {
+        category: "blanket",
+        img: exploreItemimg3,
+        bgImg: "#f5f3ff",
+        bgMain: exploreimg3,
+        productQuantity: "144",
+        title: "Recycled Blanket",
+    },
+    {
+        category: "shorts",
+        img: exploreItemimg4,
+        bgImg: "#eef2ff",
+        bgMain: exploreimg4,
+        productQuantity: "343",
+        title: "Cycling Shorts",
+    },
+    {
+        category: "jersey",
+        img: exploreItemimg5,
+        bgImg: "#eff6ff",
+        bgMain: exploreimg5,
+        productQuantity: "222",
+        title: "Cycling Jersey",
+    },
+    {
+        category: "coat",
+        img: exploreItemimg6,
+        bgImg: "#fff7ed ",
+        bgMain: exploreimg6,
+        productQuantity: "155",
+        title: "Car Coat",
+    },
+];
+export const EXPERT_LIST = [
+    {
+        title: "Suede Bomber Jacker",
+        listImgItem: [expertItem1, expertItem2, expertItem3],
+        imgAside: expertAside1,
+        category: "Orange",
+        price: "52",
+        rating: "4.9",
+        reviews: "269",
+    },
+    {
+        title: "Suede Bomber Jacker",
+        listImgItem: [expertItem4, expertItem5, expertItem6],
+        imgAside: expertAside2,
+        category: "Orange",
+        price: "52",
+        rating: "4.9",
+        reviews: "269",
+    },
+    {
+        title: "Suede Bomber Jacker",
+        listImgItem: [expertItem7, expertItem8, expertItem9],
+        imgAside: expertAside3,
+        category: "Orange",
+        price: "52",
+        rating: "4.9",
+        reviews: "269",
+    },
+];
+export const BLOG_ASIDE = {
+    label: "Normal",
+    title: "interdum velit euismod in pellentesque massa placerat duis ultricies lacus",
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, culpa?",
+    avtWriter: avtBlog1,
+    nameWriter: "Giada Mann",
+    dateStartBlog: "May 20, 2021",
+    imgBlog: blogAside,
+};
+export const BLOG_LIST = [
+    {
+        label: "Normal",
+        title: "interdum velit euismod in pellentesque massa placerat duis ultricies lacus",
+        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, culpa?",
+        avtWriter: avtBlog1,
+        nameWriter: "Giada Mann",
+        dateStartBlog: "May 20, 2021",
+        imgBlog: blogItem1,
+    },
+    {
+        label: "Normal",
+        title: "fringilla ut morbi tincidunt augue interdum velit euismod in pellentesque",
+        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, culpa?",
+        avtWriter: avtBlog1,
+        nameWriter: "Giada Mann",
+        dateStartBlog: "May 20, 2021",
+        imgBlog: blogItem2,
+    },
+    {
+        label: "Normal",
+        title: "non sodales neque sodales ut etiam sit amet nisl purus",
+        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, culpa?",
+        avtWriter: avtBlog1,
+        nameWriter: "Giada Mann",
+        dateStartBlog: "May 20, 2021",
+        imgBlog: blogItem3,
     },
 ];

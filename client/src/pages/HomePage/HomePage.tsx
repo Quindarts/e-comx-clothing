@@ -1,4 +1,3 @@
-import React, { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -17,7 +16,10 @@ import UtilList from "./UtilList";
 import earnMoney from "assets/image/home/earnMoney.webp";
 import logo from "assets/image/logo.svg";
 import { Link } from "react-router-dom";
-
+import ExploringList from "./ExploringList";
+import promo from "assets/image/home/promo2.webp";
+import OurExperts from "./OurExperts";
+import NewsListBlog from "./NewsListBlog";
 function HomePage() {
     const listnew = [1, 2, 3, 4, 5, 6];
     const { openToast, handleClickToast, handleCloseToast } = useToast();
@@ -25,14 +27,21 @@ function HomePage() {
 
     return (
         <>
-            <div className="home_page">
+            <section className="home_page">
                 <div className="home_page--slide">
                     <Swiper
                         cssMode={true}
                         navigation={true}
-                        pagination={true}
+                        centeredSlides={true}
+                        pagination={{
+                            clickable: true,
+                        }}
                         mousewheel={true}
                         keyboard={true}
+                        autoplay={{
+                            delay: 2500,
+                            disableOnInteraction: false,
+                        }}
                         modules={[
                             Navigation,
                             Autoplay,
@@ -40,11 +49,11 @@ function HomePage() {
                             Mousewheel,
                             Keyboard,
                         ]}
-                        className="mySwiper"
+                        className="slide_homepage"
                     >
                         {homeSlide.map((img) => (
                             <SwiperSlide className="main_slide">
-                                <div className="flex w-full h-full content_slide ">
+                                <div className="flex  w-full h-full content_slide ">
                                     <div className="content_slide--text flex flex-col justify-center">
                                         <span className="flex gap-2">
                                             In this reason, find the best{" "}
@@ -97,14 +106,36 @@ function HomePage() {
                     </div>
                     <div className="">
                         <Swiper
-                            spaceBetween={100}
-                            slidesPerView={4}
+                            spaceBetween={50}
+                            slidesPerView={1}
                             navigation={true}
                             pagination={true}
+                            autoplay={{
+                                delay: 2000,
+                                disableOnInteraction: false,
+                            }}
                             mousewheel={true}
                             keyboard={true}
-                            modules={[Navigation, Mousewheel, Keyboard]}
-                            className="mySwiper"
+                            modules={[
+                                Navigation,
+                                Autoplay,
+                                Mousewheel,
+                                Keyboard,
+                            ]}
+                            className="news_swiper_homepage"
+                            breakpoints={{
+                                640: {
+                                    slidesPerView: 2,
+                                    spaceBetween: 50,
+                                },
+                                1024: {
+                                    slidesPerView: 3,
+                                },
+                                1280: {
+                                    slidesPerView: 4,
+                                    spaceBetween: 100,
+                                },
+                            }}
                         >
                             {listnew.map((item) => (
                                 <>
@@ -124,6 +155,7 @@ function HomePage() {
                 <div className="until_homepage">
                     <UtilList />
                 </div>
+
                 <div className="earn_money_homepage flex flex-wrap justify-between">
                     <div className="earn_money_homepage--content">
                         <div className="logo  w-[11.2rem] h-[4rem]">
@@ -148,7 +180,100 @@ function HomePage() {
                         <img src={earnMoney} alt="earnMoney_homepage" />
                     </div>
                 </div>
-            </div>
+
+                <div className="exploring_homepage w-[100%]">
+                    <ExploringList />
+                </div>
+
+                <div className="home_page--bestSellersProducts">
+                    <div className="title_homepage">
+                        <h2>
+                            Best Sellers.
+                            <span className="ml-2">
+                                Best selling of the month
+                            </span>
+                        </h2>
+                    </div>
+                    <div className="">
+                        <Swiper
+                            spaceBetween={50}
+                            slidesPerView={1}
+                            navigation={true}
+                            pagination={true}
+                            autoplay={{
+                                delay: 2000,
+                                disableOnInteraction: false,
+                            }}
+                            mousewheel={true}
+                            keyboard={true}
+                            modules={[
+                                Navigation,
+                                Autoplay,
+                                Mousewheel,
+                                Keyboard,
+                            ]}
+                            className="sellers_swiper_homepage"
+                            breakpoints={{
+                                640: {
+                                    slidesPerView: 2,
+                                    spaceBetween: 50,
+                                },
+                                1024: {
+                                    slidesPerView: 3,
+                                },
+                                1280: {
+                                    slidesPerView: 4,
+                                    spaceBetween: 100,
+                                },
+                            }}
+                        >
+                            {listnew.map((item) => (
+                                <>
+                                    <SwiperSlide>
+                                        <CardProduct
+                                            handleOpenModal={handleOpenModal}
+                                            handleClickToast={handleClickToast}
+                                            key={item}
+                                        />
+                                    </SwiperSlide>
+                                </>
+                            ))}
+                        </Swiper>
+                    </div>
+                </div>
+                <div className="specialOffer_homepage">
+                    <div className="specialOffer_homepage--bg flex gap-[3rem] flex-wrap">
+                        <div className="specialOffer_homepage--img ">
+                            <img src={promo} alt="" />
+                        </div>
+                        <div className="specialOffer_homepage--content">
+                            <div className="logo  w-[11.2rem] h-[4rem]">
+                                <Link to={ROUTE.INDEX}>
+                                    <img width="100%" src={logo} alt="logo" />
+                                </Link>
+                            </div>
+                            <h1>Special offer in kids products</h1>
+                            <p>
+                                Fashion is a form of self-expression and
+                                autonomy at a particular period and place.
+                            </p>
+                            <Button variant="contain" color="black">
+                                Discover more
+                            </Button>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="ourExperts_homepage">
+                    <div className="title_homepage">
+                        <h2>Chosen by our experts</h2>
+                    </div>
+                    <OurExperts />
+                </div>
+                <div className="blog_homepage w-[100%]">
+                    <NewsListBlog />
+                </div>
+            </section>
             <Modal type="center" onClose={handleCloseModal} open={openModal}>
                 Hello world
             </Modal>

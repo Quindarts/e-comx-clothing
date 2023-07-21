@@ -3,18 +3,37 @@
         position: relative;
         background-color: $green-400;
         .main_slide {
-            width: 100%;
-            height: 66rem;
+            height: 32rem;
+            @include respond(large-mobile) {
+                height: 64rem;
+            }
+            @include respond(large-desktop) {
+                height: 64rem;
+            }
         }
         .content_slide {
             &--text {
+                padding: 1rem;
                 max-width: 76.8rem;
                 z-index: 1;
+                margin-top: auto;
+                margin-bottom: auto;
                 span {
-                    @include text(2rem, 500, $grey-800);
+                    margin-top: 5rem;
+                    @include text(1.6rem, 500, $grey-800);
+                    @include respond(large-mobile) {
+                        font-size: 2rem;
+                    }
                 }
                 h1 {
-                    @include text(7.2rem, 600, $black);
+                    @include text(2.6rem, 600, $black);
+                    @include respond(large-mobile) {
+                        font-size: 5rem;
+                        margin-top: 4rem;
+                    }
+                    @include respond(large-desktop) {
+                        font-size: 7.2rem;
+                    }
                 }
                 button {
                     margin-top: 5.6rem;
@@ -28,8 +47,13 @@
                 right: 1rem;
                 top: 0;
                 bottom: 0;
-                width: 65.2rem;
-                height: 63.3rem;
+                opacity: 0.3;
+                @include respond(desktop) {
+                    opacity: 1;
+                }
+                @include respond(large-desktop) {
+                    @include box(63.2rem, 63.3rem);
+                }
                 img {
                     height: 100%;
                     width: 100%;
@@ -55,11 +79,22 @@
     .title_homepage {
         margin-top: 12.8rem;
         h2 {
-            @include text(3.6rem, 600, $black);
+            @include text(3rem, 600, $black);
             margin-bottom: 5.6rem;
-
             span {
-                @include text(3.6rem, 600, $grey-600);
+                @include text(3rem, 600, $grey-600);
+                @include respond(large-mobile) {
+                    font-size: 3.6rem;
+                }
+                @include respond(large-desktop) {
+                    font-size: 4rem;
+                }
+            }
+            @include respond(large-mobile) {
+                font-size: 3.6rem;
+            }
+            @include respond(large-desktop) {
+                font-size: 4rem;
             }
         }
     }
@@ -94,11 +129,68 @@
             }
         }
     }
+    .specialOffer_homepage {
+        padding: 0 1.6rem !important;
+        &--bg {
+            background-color: $yellow-200;
+            border-radius: 3rem;
+        }
+        &--img {
+            display: none;
+            @include respond(large-mobile) {
+                display: block;
+                width: calc(50% - 3rem);
+            }
+            position: relative;
+            img {
+                position: absolute;
+                bottom: 0;
+                object-fit: cover;
+            }
+        }
+        &--content {
+            width: 100%;
+            padding: 2rem;
+            @include respond(large-mobile) {
+                width: calc(50% - 3rem);
+            }
+            @include respond(large-desktop) {
+                padding: 6.4rem 6rem;
+            }
+            h1 {
+                margin-top: 2rem;
+                @include text(2rem, 600, $black, 3rem);
+                @include respond(tablet) {
+                    font-size: 4rem;
+                    line-height: 5rem;
+                }
+                @include respond(large-desktop) {
+                    margin: 4rem 0;
+                    line-height: 8rem;
+                    font-size: 6rem;
+                }
+            }
+            p {
+                @include text(1.6rem, 400, $grey-700);
+                @include respond(large-desktop) {
+                    font-size: 1.4rem;
+                }
+                margin: 2rem 0;
+            }
+            button {
+                padding: 1rem 3rem;
+                @include text(1.6rem, 500, $white);
+            }
+        }
+    }
 }
 .content_slide,
 .home_page--discover,
-.earn_money_homepage,
 .home_page--newsArrivals,
+.home_page--bestSellersProducts,
+.earn_money_homepage,
+.ourExperts_homepage,
+.specialOffer_homepage,
 .until_homepage {
     margin-bottom: 12.8rem;
     margin-left: auto;
@@ -117,5 +209,14 @@
     @include respond(large-desktop) {
         max-width: 128rem;
         padding: 0 4rem 12.8rem 4rem;
+    }
+}
+.exploring_homepage {
+    margin-bottom: 12.8rem;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: 1px solid $grey-450;
+    @include respond(large-desktop) {
+        max-width: 150rem;
     }
 }

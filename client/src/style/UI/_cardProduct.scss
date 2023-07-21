@@ -1,10 +1,12 @@
 .card {
-    @include box(21.6rem, 100%);
-    max-width: 31rem;
+    width: 100%;
     min-width: 29.6rem;
     margin-right: 1.6rem;
     position: relative;
     &_image {
+        img{
+            margin: auto;
+        }
         display: block;
         background-color: $grey-400;
         border-radius: 2.4rem;

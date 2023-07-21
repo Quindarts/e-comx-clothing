@@ -1,0 +1,34 @@
+.ourExperts {
+    &--item {
+        cursor: pointer;
+        width: 100%;
+        @include respond(desktop) {
+            width: calc(33.3% - 2rem);
+        }
+        .item {
+            &_top {
+                background-color: $grey-200;
+                border-radius: 2rem;
+            }
+            &_middle {
+                img {
+                    object-fit: cover;
+                    width: calc(33.33% - 0.5rem);
+                    border-radius: 2rme;
+                }
+            }
+            &_bottom {
+                margin-top: 1rem;
+                &--content {
+                    h2 {
+                        @include text(2rem, 600, $black);
+                        margin-bottom: 0;
+                    }
+                    span {
+                        @include text(1.6rem, 400, $grey-600);
+                    }
+                }
+            }
+        }
+    }
+}
