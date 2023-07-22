@@ -7,7 +7,7 @@ interface AccordionPropsType {
     children: React.ReactNode;
 }
 function Accordion(props: AccordionPropsType) {
-    const [isOpen, setIsOpen] = useState<boolean>(false);
+    const [isOpen, setIsOpen] = useState<boolean>(true);
     const handleOpen = () => {
         setIsOpen(!isOpen);
     };

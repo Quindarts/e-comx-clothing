@@ -1,0 +1,97 @@
+.modal_product_detail {
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    img {
+        border-radius: 2rem;
+    }
+    &--aside {
+        width: 100%;
+        @include respond(desktop) {
+            width: calc(50% - 3rem);
+        }
+    }
+    .aside_product_img {
+        &--main {
+            .btn_liked {
+                &:hover {
+                    transition: 00.2s ease-in;
+                    svg {
+                        color: $red;
+                    }
+                }
+            }
+            img {
+                width: 100%;
+            }
+        }
+        &--items {
+            width: 100%;
+            img {
+                width: calc(50% - 1rem);
+                object-fit: cover;
+            }
+        }
+    }
+    &--section {
+        width: 100%;
+        @include respond(desktop) {
+            width: 50%;
+        }
+        .btn_price {
+            svg {
+                width: 2rem;
+                height: 2rem;
+            }
+            @include respond(large-mobile) {
+                font-size: 3rem;
+                svg {
+                    width: 3rem;
+                    height: 3rem;
+                }
+                font-weight: bold;
+                padding: 0;
+                border: none;
+            }
+        }
+        .list-size {
+            overflow-y: hidden;
+            overflow-x: auto;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
+        span,
+        label {
+            @include text(1.2rem, 500, $grey-800);
+            @include respond(large-mobile) {
+                font-size: 1.6rem;
+            }
+        }
+        h1 {
+            cursor: pointer;
+            @include text(2rem, 600, $black);
+            &:hover {
+                color: $blue-650;
+                transition: 0.2s ease-in;
+            }
+            @include respond(large-mobile) {
+                font-size: 2.4rem;
+            }
+        }
+        ul {
+            margin-left: 2rem;
+            li {
+                @include text(1.6rem, 500, $cl-title-accordin, 3rem);
+                list-style-type: square;
+            }
+        }
+    }
+}

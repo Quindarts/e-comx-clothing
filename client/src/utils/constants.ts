@@ -52,7 +52,7 @@ export const ROUTE = {
     COLLECTION: "/collection",
     CART: "/cart",
     SEARCH: "/search",
-    CHECKOUT: "/cart",
+    CHECKOUT: "/checkout",
     NOT_FOUND: "/not-found",
     PRODUCT_DETAIL: "/product-detail",
     COMPONENT: "/component",

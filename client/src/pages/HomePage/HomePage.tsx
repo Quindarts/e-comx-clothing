@@ -20,6 +20,7 @@ import ExploringList from "./ExploringList";
 import promo from "assets/image/home/promo2.webp";
 import OurExperts from "./OurExperts";
 import NewsListBlog from "./NewsListBlog";
+import FrameProductDetail from "components/UI/FrameProductDetail";
 function HomePage() {
     const listnew = [1, 2, 3, 4, 5, 6];
     const { openToast, handleClickToast, handleCloseToast } = useToast();
@@ -275,7 +276,7 @@ function HomePage() {
                 </div>
             </section>
             <Modal type="center" onClose={handleCloseModal} open={openModal}>
-                Hello world
+                <FrameProductDetail />
             </Modal>
             <Toast open={openToast} handleClose={handleCloseToast} />
         </>
