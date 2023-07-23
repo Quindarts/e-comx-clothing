@@ -1,0 +1,31 @@
+.account_layout {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20rem;
+    padding: 0 1.6rem 0 1.6rem;
+    width: 100%;
+    @include respond(large-mobile) {
+        max-width: 64rem;
+    }
+    @include respond(tablet) {
+        max-width: 76.8rem;
+    }
+    @include respond(desktop) {
+        max-width: 102.4rem;
+    }
+    @include respond(large-desktop) {
+        max-width: 128rem;
+        padding: 0 4rem 0 4rem;
+    }
+    h1 {
+        @include text(4rem, 600, $black);
+    }
+    p {
+        @include text(1.8rem, 400, $grey-600);
+        span {
+            font-size: 1.8rem;
+            color: $black;
+            font-weight: bold;
+        }
+    }
+}

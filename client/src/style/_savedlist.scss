@@ -1,0 +1,19 @@
+.saved_list {
+    padding: 5.6rem 0 12.8rem;
+    max-width: 102.4rem;
+    h1 {
+        @include text(2.4rem, 600, $black);
+        @include respond(large-mobile) {
+            font-size: 3rem;
+        }
+    }
+    &--card {
+        width: 100%;
+        @include respond(tablet) {
+            width: calc(50% - 2rem);
+        }
+        @include respond(desktop) {
+            width: calc(33.3% - 2rem);
+        }
+    }
+}

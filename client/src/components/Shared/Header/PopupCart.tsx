@@ -21,7 +21,7 @@ function PopupCart() {
                     <h1>Shopping Cart</h1>
                     <div className="list_cart">
                         {list.map((items: any, index: number) => (
-                            <CardOrder />
+                            <CardOrder key={index} type="Remove" />
                         ))}
                     </div>
                 </div>

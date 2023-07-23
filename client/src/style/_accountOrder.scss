@@ -1,0 +1,20 @@
+.account_order {
+    padding-top: 5.6rem;
+    padding-bottom: 12.8rem;
+    max-width: 102.8rem;
+    margin-left: auto;
+    margin-right: auto;
+    h1 {
+        @include text(2.4rem, 600, $black);
+        @include respond(large-mobile) {
+            font-size: 3rem;
+        }
+    }
+}
+
+
+@include respond(large-mobile) {
+    width: calc(100% - 12rem);
+    min-width: 31.2rem;
+    min-height: 4.8rem;
+}

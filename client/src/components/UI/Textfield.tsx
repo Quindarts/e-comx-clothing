@@ -6,6 +6,7 @@ type TextFieldPropsType = {
     type?: string;
     size?: "sm" | "md" | "lg";
     className?: string;
+    value?: string;
 };
 function Textfield(props: TextFieldPropsType) {
     const {
@@ -14,6 +15,7 @@ function Textfield(props: TextFieldPropsType) {
         type = "text",
         size,
         className = "",
+        value,
         ...rest
     } = props;
     return (
@@ -24,7 +26,7 @@ function Textfield(props: TextFieldPropsType) {
             }`}
         >
             {label && <label>{label}</label>}
-            <input type={type} placeholder={placeholder} />
+            <input value={value} type={type} placeholder={placeholder} />
         </div>
     );
 }

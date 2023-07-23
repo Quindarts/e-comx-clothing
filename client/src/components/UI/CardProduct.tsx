@@ -17,7 +17,7 @@ function CardProduct(props: CardProductPropsType) {
                         <Icon icon={ICON_LIBARY.i_heart} />
                     </Button>
                     <img alt="pr" src={img} />
-                    <div className="overlay flex justify-between gap-4">
+                    <div className="overlay flex justify-center gap-[2rem]">
                         <Button
                             className="flex items-center gap-2 justify-center"
                             variant="contain"

@@ -1,0 +1,47 @@
+.card_order_account {
+    width: 100%;
+    // min-height: 58.7rem;
+    border-radius: 1rem;
+    border: 1px solid $grey-450;
+    margin-top: 3rem;
+    &--information {
+        padding: 1rem;
+        @include respond(large-mobile) {
+            padding: 3.2rem;
+        }
+        background-color: $grey-200;
+        .information {
+            h1 {
+                @include text(1.4rem, 600, $black);
+                @include respond(large-mobile) {
+                    font-size: 1.8rem;
+                }
+            }
+            p {
+                margin-top: 0.8rem;
+                @include text(1.4rem, 400, $grey-600);
+                span {
+                    @include text(1.4rem, 400, $blue-600);
+                }
+            }
+        }
+        button {
+            padding: 0.5rem 1.2rem;
+            font-size: 1rem;
+            height: 2.5rem;
+            width: 10rem;
+            @include respond(large-mobile){
+                padding: 1rem 2.4rem;
+                font-size: 1.4rem;
+                height: 5rem;
+                width: auto;
+            }
+        }
+    }
+    &--list {
+        padding: 1rem;
+        @include respond(large-mobile) {
+            padding: 3.2rem;
+        }
+    }
+}

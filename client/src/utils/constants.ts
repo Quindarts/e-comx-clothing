@@ -48,7 +48,6 @@ import blogItem3 from "assets/image/home/blogItem3.webp";
 export const ROUTE = {
     //MAIN
     INDEX: "/",
-    ACCOUNT: "/account",
     COLLECTION: "/collection",
     CART: "/cart",
     SEARCH: "/search",
@@ -61,6 +60,13 @@ export const ROUTE = {
     LOGIN: "/auth/login",
     REGISTER: "/auth/register",
     FORGOT_PASSWORD: "/auth/forgot-pass",
+    
+    //Authorziations
+    ACCOUNT: "/account",
+    SAVED_LIST: '/account/savelists',
+    ACCOUNT_ORDED: "/account/order",
+    ACCOUNT_CHANGE_PASS: "/account/password",
+    ACCOUNT_BILLING :"/account/billing",
 
     //OTHERS
     MEN: "/collection/men",

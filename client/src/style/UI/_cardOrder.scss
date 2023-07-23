@@ -1,38 +1,76 @@
 .card_order {
     width: 100%;
-    min-width: 40.8rem;
-    min-height: 13.6rem;
-    padding: 2rem 0;
-    border-bottom: 1px solid $grey-450;
+    min-width: 100%;
+    margin-bottom: 2rem;
+    @include respond(large-mobile) {
+        min-width: 40.8rem;
+        min-height: 13.6rem;
+        padding: 2rem 0;
+    }
     &--img {
         img {
-            @include box(8rem, 9.6rem);
+            @include box(5rem, 5rem);
+            @include respond(large-mobile) {
+                @include box(9.6rem, 9.6rem);
+            }
         }
         border-radius: 0.8rem;
         background-color: $bg-order-card;
     }
     &--main {
-        width: 31.2rem;
-        min-width: 31.2rem;
-        min-height: 4.8rem;
+        width: 100%;
+        @include respond(large-mobile) {
+            width: calc(100% - 12rem);
+            min-width: 31.2rem;
+            min-height: 4.8rem;
+        }
+
         .product_detail {
+            button {
+                padding: 0;
+                border: 0;
+                font-weight: bold;
+                @include respond(large-mobile){
+                    padding: 1px 6px;
+                    border: 2px solid $green-600;
+                }
+            }
             &--name {
-                @include text(1.6rem, 600, $grey-800);
+                @include text(1rem, 600, $grey-800);
+                @include respond(large-mobile) {
+                    font-size: 1.6rem;
+                }
             }
             &--category,
             span {
                 margin-top: 0.4rem;
-                @include text(1.4rem, 400, $grey-650);
+                @include text(1rem, 400, $grey-650);
+                @include respond(large-mobile) {
+                    font-size: 1.4rem;
+                }
             }
         }
         .more_info {
-            min-height: 4.8rem;
-            .quantity,
+            .quantity {
+                @include text(1rem, 400, $grey-650);
+                @include respond(large-mobile) {
+                    font-size: 1.4rem;
+                    min-height: 4.8rem;
+                }
+            }
             span {
-                @include text(1.4rem, 400, $grey-650);
+                @include text(1rem, 600, $grey-800);
+                @include respond(large-mobile) {
+                    font-size: 1.4rem;
+                }
             }
             button {
                 padding: 0;
+                @include text(1rem, 600, $blue-650);
+
+                @include respond(large-mobile) {
+                    font-size: 1.4rem;
+                }
             }
         }
     }

@@ -1,6 +1,10 @@
-.toast div {
+.MuiSnackbarContent-root {
     background-color: $white !important;
-    @include text(2rem, 500, $black);
+    .MuiSnackbarContent-message {
+        background-color: $white !important;
+        @include text(2rem, 500, $black);
+        width: 100%;
+    }
 }
 .notistack-Snackbar div {
     font-size: 1.6rem;

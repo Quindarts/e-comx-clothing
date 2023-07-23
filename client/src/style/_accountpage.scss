@@ -1,0 +1,52 @@
+.account_page {
+    padding: 5.6rem 0 12.8rem 0;
+    max-width: 89.6rem;
+    h1 {
+        font-size: 2.4rem;
+        @include respond(large-mobile) {
+            font-size: 3rem;
+        }
+    }
+    &--uploadAvt {
+        width: 12.8rem;
+
+        .img_old {
+            position: relative;
+            img {
+                @include box(12.8rem, 12.8rem);
+                border-radius: 50%;
+                object-fit: cover;
+                filter: brightness(50%);
+            }
+            input {
+                cursor: pointer;
+                @include box(12.8rem, 12.8rem);
+                border-radius: 50%;
+                position: absolute;
+                top: 0;
+                z-index: 1;
+            }
+            .desc_upload {
+                position: absolute;
+                top: calc(50% - 2rem);
+                left: calc(50% - 4rem);
+                @include text(1rem, 500, $white);
+            }
+        }
+    }
+    &--information {
+        width: 100%;
+        @include respond(large-mobile) {
+            width: calc(100% - 19.2rem);
+        }
+        max-width: 76.8rem;
+        input {
+            margin-bottom: 2.4rem;
+        }
+        button {
+            margin-top: 3rem;
+            padding: 1.4rem 2.4rem;
+            @include text(1.6rem, 400, $white);
+        }
+    }
+}

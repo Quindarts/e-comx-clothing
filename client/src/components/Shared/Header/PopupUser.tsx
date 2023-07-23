@@ -2,9 +2,9 @@ import { Icon } from "@iconify/react";
 import Button from "components/UI/Button";
 import usePopup from "hooks/usePopup";
 import React from "react";
-import { ICON_LIBARY } from "utils/constants";
+import { ICON_LIBARY, ROUTE } from "utils/constants";
 import avt from "assets/image/avt.jpg";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Switch from "@mui/material/Switch";
 function PopupUser() {
     const { handleActive, active, menuRef } = usePopup();
@@ -36,21 +36,21 @@ function PopupUser() {
                     </div>
                 </div>
                 <div className="user_menu mt-4">
-                    <Link className="flex gap-5 items-center" to="/">
+                    <Link className="flex gap-5 items-center" to={ROUTE.ACCOUNT}>
                         <Icon icon={ICON_LIBARY.i_user} />
                         <span>My Account</span>
                     </Link>
-                    <Link className="flex gap-5 items-center" to="/">
+                    <Link className="flex gap-5 items-center" to={ROUTE.ACCOUNT_ORDED}>
                         <Icon icon={ICON_LIBARY.i_order} />
                         <span>My Order</span>
                     </Link>
-                    <Link className="flex gap-5 items-center " to="/">
+                    <Link className="flex gap-5 items-center " to={ROUTE.SAVED_LIST}>
                         <Icon icon={ICON_LIBARY.i_heart_outline} />
                         <span>Wishlist</span>
                     </Link>
                     <div className="my-4 spacing"></div>
 
-                    <Link className="flex gap-5 items-center" to="/">
+                    <Link className="flex gap-5 items-center" to="#">
                         <Icon icon={ICON_LIBARY.i_light_buld} />
                         <span>Dark theme</span>
                         <Switch
@@ -60,7 +60,7 @@ function PopupUser() {
                             color="warning"
                         />
                     </Link>
-                    <Link className="flex gap-5 items-center" to="/">
+                    <Link className="flex gap-5 items-center" to={ROUTE.ACCOUNT_BILLING}>
                         <Icon icon={ICON_LIBARY.i_help} />
                         <span> Help</span>
                     </Link>
