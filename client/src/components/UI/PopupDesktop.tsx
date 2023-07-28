@@ -5,8 +5,8 @@ import { ICON_LIBARY } from "utils/constants";
 import Button from "./Button";
 interface PopupDesktopPropsType {
     children?: React.ReactNode;
-    type: "list" | "icon" | "basic";
-    mainType?: "basic" | "checkbox" | "radio";
+    type: "list" | "icon" | "basic" | string;
+    mainType?: "basic" | "checkbox" | "radio" | string;
     iconTitle?: string;
     title?: string;
     className?: string;
@@ -20,7 +20,7 @@ function PopupDesktop(props: PopupDesktopPropsType) {
         type,
         iconTitle = "",
         title = "",
-        mainType = "basic",
+        mainType = "",
         ...rest
     } = props;
     return (

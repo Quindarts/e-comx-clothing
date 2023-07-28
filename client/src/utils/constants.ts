@@ -40,11 +40,14 @@ import expertItem7 from "assets/image/home/expertItem7.webp";
 import expertItem8 from "assets/image/home/expertItem8.webp";
 import expertItem9 from "assets/image/home/expertItem9.webp";
 
-import  blogAside  from 'assets/image/home/blogAside.webp';
+import blogAside from "assets/image/home/blogAside.webp";
 import avtBlog1 from "assets/image/home/avtUserBlog1.webp";
 import blogItem1 from "assets/image/home/blogItem1.webp";
 import blogItem2 from "assets/image/home/blogItem2.webp";
 import blogItem3 from "assets/image/home/blogItem3.webp";
+
+
+// [APP ROUTE]
 export const ROUTE = {
     //MAIN
     INDEX: "/",
@@ -60,13 +63,13 @@ export const ROUTE = {
     LOGIN: "/auth/login",
     REGISTER: "/auth/register",
     FORGOT_PASSWORD: "/auth/forgot-pass",
-    
+
     //Authorziations
     ACCOUNT: "/account",
-    SAVED_LIST: '/account/savelists',
+    SAVED_LIST: "/account/savelists",
     ACCOUNT_ORDED: "/account/order",
     ACCOUNT_CHANGE_PASS: "/account/password",
-    ACCOUNT_BILLING :"/account/billing",
+    ACCOUNT_BILLING: "/account/billing",
 
     //OTHERS
     MEN: "/collection/men",
@@ -76,15 +79,7 @@ export const ROUTE = {
     BLOG: "/blog",
 };
 
-export const PRODUCT_CATEGORY = ["All Items", "Women", "Man", "Kids", "Jewels"];
-export const PRODUCT_SIZE = ["XS", "M", "L", "XL", "2XL"];
-export const PRODUCT_FILTER = [
-    "Most Popular",
-    "Best Rating",
-    "Price Low - Hight",
-    "Price Hight - Low",
-];
-
+// [ICON TEMPLATE]
 export const ICON_LIBARY = {
     i_search: "ep:search",
     i_user: "ri:user-line",
@@ -131,8 +126,71 @@ export const ICON_LIBARY = {
     i_crown: "lucide:crown",
     i_jewelry:
         "streamline:shopping-jewelry-diamond-2-diamond-money-payment-finance-wealth",
+    i_color: "iconoir:fill-color",
 };
 
+
+// [FILTER LIST OPTIONS ]
+
+export const PRODUCT_CATEGORY = ["All Items", "Women", "Man", "Kids", "Jewels"];
+
+export const PRODUCT_SIZE = ["XS", "M", "L", "XL", "2XL"];
+
+export const PRODUCT_FILTER = [
+    "Most Popular",
+    "Best Rating",
+    "Price Low - Hight",
+    "Price Hight - Low",
+];
+export const PRODUCT_SALE = ["60%", "50%", "25%"];
+
+export const PRODUCT_COLORS = [
+    "White",
+    "Beige",
+    "Blue",
+    "Black",
+    "Brown",
+    "Green",
+    "Navy",
+];
+export const CATEGORY_CONTROL_FILTER = [
+    {
+        icon: ICON_LIBARY.i_dollar,
+        name: "Price",
+        mainType: "radio",
+        type: "list",
+        list: PRODUCT_FILTER,
+    },
+    {
+        icon: ICON_LIBARY.i_order,
+        name: "Categories",
+        list: PRODUCT_CATEGORY,
+        mainType: "checkbox",
+        type: "list",
+    },
+    {
+        icon: ICON_LIBARY.i_color,
+        name: "Colors",
+        list: PRODUCT_COLORS,
+        mainType: "checkbox",
+        type: "list",
+    },
+    {
+        icon: ICON_LIBARY.i_size,
+        name: "Sizes",
+        list: PRODUCT_SIZE,
+        mainType: "checkbox",
+        type: "list",
+    },
+    {
+        icon: ICON_LIBARY.i_setting,
+        name: "On Sale",
+        list: PRODUCT_SALE,
+        mainType: "radio",
+        type: "list",
+    },
+];
+// [HOME LIST]
 export const homeSlide = [hsl1, hsl2, hsl3];
 
 export const DISCOVER_LIST = [
@@ -312,3 +370,4 @@ export const BLOG_LIST = [
         imgBlog: blogItem3,
     },
 ];
+

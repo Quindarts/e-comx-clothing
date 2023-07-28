@@ -7,20 +7,12 @@
 @import "./loading";
 @import "./toast";
 @import "./navtabs";
+@import "./searchfield";
 
 //MODAL & POPUP
-@import "./modal";
-@import "./modalProductDetail";
+@import "Modal/index";
 @import "./popup";
 
 //Card
-@import "./cardProduct";
-@import "./cardOrder";
-@import "./cardBlog";
-@import "./cardOrderAccount";
-//Home page
-@import "./discoverList";
-@import "./untilList";
-@import "./exploringList";
-@import "./ourExperts";
-@import "./newsBlogList";
+
+@import "Card/index";

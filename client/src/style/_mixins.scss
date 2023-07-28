@@ -15,7 +15,7 @@
 @mixin text(
     $font-size,
     $font-weight,
-    $color: $text-primary,
+    $color: $grey-600,
     $line-height: 1.5
 ) {
     font-size: $font-size;

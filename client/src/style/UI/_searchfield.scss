@@ -1,0 +1,24 @@
+.search_field {
+    background-color: $white;
+    border-radius: 9999px;
+    width: 67.2rem;
+    height: 6rem;
+    padding-left: 2rem;
+    padding-right: 1rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+        0 4px 6px -4px rgba(0, 0, 0, 0.1);
+    input {
+        width: calc(100% - 4rem);
+        padding: 2rem;
+        height: 5rem;
+        outline: none;
+        @include text(1.6rem, 400, $grey-600);
+    }
+    &--btn_search {
+        color: $grey-600;
+    }
+    &--submit{
+        border-radius: 50%;
+        padding: 1rem ;
+    }
+}

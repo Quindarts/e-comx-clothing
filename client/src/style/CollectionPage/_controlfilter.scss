@@ -1,0 +1,20 @@
+.control_filter {
+    &--top {
+        width: 100%;
+
+        .filter_aside {
+            .type_btn {
+                padding: 1.2rem 2.4rem;
+                border-radius: 9999px;
+                @include text(1.6rem, 500, $grey-300);
+                &:hover {
+                    transition: 0.2s ease-in;
+                    background-color: $grey-650;
+                }
+            }
+        }
+        .filter_btn {
+            padding: 1.2rem 2.4rem;
+        }
+    }
+}

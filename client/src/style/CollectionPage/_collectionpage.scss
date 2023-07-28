@@ -1,0 +1,47 @@
+.collection_page {
+    margin-bottom: 12.8rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 1.6rem 12.8rem 1.6rem;
+    @include respond(large-mobile) {
+        max-width: 64rem;
+    }
+    @include respond(tablet) {
+        max-width: 76.8rem;
+    }
+    @include respond(desktop) {
+        max-width: 102.4rem;
+    }
+    @include respond(large-desktop) {
+        max-width: 128rem;
+        padding: 0 4rem 12.8rem 4rem;
+    }
+    &--card {
+        width: 100%;
+        @include respond(tablet) {
+            width: calc(50% - 5rem);
+        }
+        @include respond(desktop) {
+            width: calc(33.3% - 5rem);
+        }
+        @include respond(large-desktop) {
+            width: calc(25% - 5rem);
+        }
+    }
+    .MuiPagination-root {
+        ul li {
+            button {
+                padding: 2.5rem 2rem;
+                @include text(2rem, 500, $grey-650);
+                border-radius: 50%;
+            }
+            svg {
+                @include box( 2.5rem, 2rem);
+            }
+        }
+        .Mui-selected {
+            background-color: $grey-800;
+            color: $white;
+        }
+    }
+}

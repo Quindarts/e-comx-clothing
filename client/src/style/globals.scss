@@ -1,23 +1,23 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,400;1,500&display=swap");
-@import "./variables";
-@import "./mixins";
-@import "./UI/index.scss";
-@import "./Shared/index.scss";
 
-//Page & Layout
-@import "./mainlayout";
-@import "./accountlayout";
-@import "./homepage";
-@import "./accountpage";
-@import "./changebilling";
-@import "./changepassword";
-@import "./savedlist";
-@import "./accountOrder";
 * {
     font-family: "Poppins", sans-serif;
     font-size: 62.5%;
     box-sizing: border-box;
 }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "./variables";
+@import "./mixins";
+
+//UI Components
+@import "./UI/index.scss";
+@import "./Shared/index.scss";
+
+//Page
+@import "CollectionPage/index";
+@import "AccountPage/index";
+@import "Home/index";
