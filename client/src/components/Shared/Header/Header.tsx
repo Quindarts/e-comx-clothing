@@ -23,7 +23,7 @@ function Header() {
                         </Button>
                     </div>
                     <div className="logo">
-                        <Link to={ROUTE.COMPONENT}>
+                        <Link to={ROUTE.INDEX}>
                             <img width="100%" src={logo} alt="logo" />
                         </Link>
                     </div>
