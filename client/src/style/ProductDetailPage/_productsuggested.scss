@@ -1,0 +1,8 @@
+.product_suggested{
+    .swiper-button-prev::after,
+    .swiper-button-next::after {
+        color: $black;
+        font-size: 3rem;
+        font-weight: bold;
+    }
+}

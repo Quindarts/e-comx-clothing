@@ -2,10 +2,12 @@ import { Icon } from "@iconify/react";
 import Button from "components/UI/Button";
 import CardOrder from "components/UI/CardOrder";
 import usePopup from "hooks/usePopup";
-import { ICON_LIBARY } from "utils/constants";
+import { useNavigate } from "react-router";
+import { ICON_LIBARY, ROUTE } from "utils/constants";
 
 function PopupCart() {
     const { handleActive, active, menuRef } = usePopup();
+    const navigate = useNavigate();
     const list = [1, 2, 3];
     return (
         <div ref={menuRef} className="popup_cart">
@@ -42,6 +44,7 @@ function PopupCart() {
                             className="w-[20rem] h-[5.4rem]"
                             variant="contain"
                             color="white"
+                            onClick={()=>navigate(ROUTE.CART)}
                         >
                             View Cart
                         </Button>

@@ -1,0 +1,26 @@
+.product_detail_page {
+  margin-bottom: 12.8rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 12.8rem;
+  padding: 0 1.6rem 0 1.6rem;
+  @include respond(large-mobile) {
+    max-width: 64rem;
+  }
+  @include respond(tablet) {
+    max-width: 76.8rem;
+  }
+  @include respond(desktop) {
+    max-width: 102.4rem;
+  }
+  @include respond(large-desktop) {
+    max-width: 128rem; 
+    padding: 0 4rem 12.8rem 4rem;
+  }
+  h3 {
+    @include text(3rem, 600, $black);
+  }
+  ul > li{
+    font-size: 1.6rem;
+  }
+}

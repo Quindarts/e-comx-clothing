@@ -7,8 +7,6 @@ function useModal() {
         setOpenModal(!openModal);
     };
     const handleOpenModal = () => {
-        console.log(openModal);
-        
         setOpenModal(true);
     };
     return { openModal, handleCloseModal, handleOpenModal };

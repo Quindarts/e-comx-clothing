@@ -2,18 +2,23 @@ import React from "react";
 import { BLOG_ASIDE, BLOG_LIST } from "utils/constants";
 import CardBlog from "components/UI/CardBlog";
 import Button from "components/UI/Button";
-function NewsListBlog() {
+interface NewsLisBlogPropsType {
+    title?: boolean;
+    background?: boolean;
+}
+function NewsListBlog(props: NewsLisBlogPropsType) {
+    const { title, background } = props;
     return (
-        <div className="newsBlogListMain flex flex-col justify-center items-center">
-            <div className="title_homepage">
+        <div style={ background ?{ background: "#f7f7f9" }:{ background: "" }} className="newsBlogListMain flex flex-col justify-center items-center">
+            {title && <div className="title_homepage">
                 <h2>
                     The latest news blog.
                     <span> From the Ciseco blog</span>
                 </h2>
-            </div>
+            </div>}
 
             <div className="newsBlogListMain_container flex flex-wrap justify-center gap-[3rem]">
-                
+
                 <div className="aside">
                     <CardBlog
                         title={BLOG_ASIDE.title}

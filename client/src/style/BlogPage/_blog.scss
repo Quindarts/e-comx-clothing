@@ -1,0 +1,37 @@
+.blog {
+  margin: 12.8rem auto;
+  
+  &_ADS {
+    text-shadow: 1rem 1rem 1rem $grey-800;
+    border-radius: 1rem;
+  }
+  @include respond(large-mobile) {
+    max-width: 64rem;
+  }
+  @include respond(tablet) {
+    max-width: 76.8rem;
+  }
+  @include respond(desktop) {
+    max-width: 102.4rem;
+  }
+  @include respond(large-desktop) {
+    max-width: 160rem;
+    padding: 0 4rem 4rem 4rem;
+  }
+  .MuiPagination-root {
+    ul li {
+      button {
+        padding: 2.5rem 2rem;
+        @include text(2rem, 500, $grey-650);
+        border-radius: 50%;
+      }
+      svg {
+        @include box(2.5rem, 2rem);
+      }
+    }
+    .Mui-selected {
+      background-color: #0284c7;
+      color: $white;
+    }
+  }
+}
