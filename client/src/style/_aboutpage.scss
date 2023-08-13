@@ -1,0 +1,74 @@
+.about_page {
+  margin-bottom: 12.8rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 12.8rem;
+  padding: 0 1.6rem 12.8rem 1.6rem;
+  @include respond(large-mobile) {
+    max-width: 64rem;
+  }
+  @include respond(tablet) {
+    max-width: 76.8rem;
+  }
+  @include respond(desktop) {
+    max-width: 102.4rem;
+  }
+  @include respond(large-desktop) {
+    max-width: 128rem;
+    padding: 0 4rem 12.8rem 4rem;
+  }
+  h1 {
+    @include text(4rem, 600, $black);
+  }
+  &--top {
+    .top_content {
+      width: 100%;
+      @include respond(large-desktop) {
+        width: 40%;
+      }
+      @include text(3rem, 400, $grey-650);
+    }
+    .top_img {
+      width: 100%;
+      @include respond(large-desktop) {
+        width: calc(60% - 3rem);
+      }
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+  &--main {
+    @include text(3rem, 400, $grey-650);
+
+    .card_avt {
+      img {
+        object-fit: cover;
+        border-radius: 1.6rem;
+        @include box(30rem, 30rem);
+      }
+      .card_content {
+        width: 100%;
+        @include respond(large-desktop) {
+          width: calc(100% - 35rem);
+        }
+        h2 {
+          @include text(2rem, 600, $black);
+        }
+        p {
+          @include text(1.6rem, 400, $grey-650);
+        }
+        ul > li {
+          color: $grey-650;
+        }
+      }
+    }
+  }
+
+  .box {
+    @include respond(desktop) {
+      width: calc(33.33% - 2rem);
+    }
+  }
+}
