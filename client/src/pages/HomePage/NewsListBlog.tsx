@@ -53,4 +53,4 @@ function NewsListBlog(props: NewsLisBlogPropsType) {
     );
 }
 
-export default NewsListBlog;
+export default React.memo(NewsListBlog);

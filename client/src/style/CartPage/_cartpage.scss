@@ -20,4 +20,12 @@
     @include text(3.5rem, 600, $black);
     margin-bottom: 4rem;
   }
+  .cart_list_responsive {
+    @include respond(large-desktop) {
+      height: 60rem;
+      width: calc(65% - 5rem);
+      padding-right: 5rem;
+      border-right: 2px solid $grey-400;
+    }
+  }
 }

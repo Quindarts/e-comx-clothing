@@ -7,8 +7,12 @@ function CartPage() {
     <div className="cart_page">
       <h1>Shopping Cart</h1>
       <div className="flex flex-wrap gap-[5rem] w-full">
-        <CartListProduct />
-        <Payment />
+        <div className="w-full cart_list_responsive">
+          <CartListProduct />
+        </div>
+        <div className="w-full lg:w-[35%]">
+          <Payment type="cart"/>
+        </div>
       </div>
     </div>
   );

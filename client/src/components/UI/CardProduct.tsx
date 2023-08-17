@@ -9,6 +9,7 @@ interface CardProductPropsType {
   handleClickToast: () => void;
 }
 function CardProduct(props: CardProductPropsType) {
+
   const { handleClickToast, handleOpenModal } = props;
   const navigate = useNavigate();
   return (
@@ -71,4 +72,4 @@ function CardProduct(props: CardProductPropsType) {
   );
 }
 
-export default CardProduct;
+export default React.memo(CardProduct);

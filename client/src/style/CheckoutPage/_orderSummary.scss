@@ -1,0 +1,6 @@
+.order_summary {
+  width: 100%;
+  @include respond(desktop) {
+    width: calc(50% - 6rem);
+  }
+}

@@ -14,6 +14,7 @@ interface FrameProductDetailPropsType {
 }
 
 function FrameProductDetail(props: FrameProductDetailPropsType) {
+
   const { isPage } = props;
   const { openToast, handleClickToast, handleCloseToast } = useToast();
   return (
@@ -165,4 +166,4 @@ function FrameProductDetail(props: FrameProductDetailPropsType) {
   );
 }
 
-export default FrameProductDetail;
+export default React.memo(FrameProductDetail);

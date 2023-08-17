@@ -67,4 +67,4 @@ function ExploringList() {
     );
 }
 
-export default ExploringList;
+export default React.memo(ExploringList);

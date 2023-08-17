@@ -1,0 +1,7 @@
+.form_payment{
+    @include text(1.6rem, 400, $black);
+    .credit_icon{
+        border: 2px solid $grey-500;
+        border-radius: 1rem;
+    }
+}

@@ -405,3 +405,39 @@ export const LIST_BENEFIT = [
     color: "#fffbeb",
   },
 ];
+
+///
+export const LIST_CONTROL_FILTER = [
+  {
+    all: {
+      active: true,
+      value: "All items",
+    },
+  },
+  {
+    women: {
+      active: false,
+      value: "Women",
+    },
+  },
+  {
+    man: {
+      active: false,
+      value: "Man",
+    },
+  },
+  {
+    jewels: {
+      active: false,
+      value: "Jewels",
+    },
+  },
+  {
+    kids: {
+      active: false,
+      value: "Kids",
+    },
+  },
+];
+
+///

@@ -1,21 +1,27 @@
 import React from "react";
 interface DropdownPropsType {
-    list: Array<string>;
-    className?: string;
+  list?: Array<string>;
+  className?: string;
+  label?: string;
 }
 function Dropdown(props: DropdownPropsType) {
-    const { className = "", list, ...rest } = props;
+  const { className = "", list, label, ...rest } = props;
 
-    return (
-        <select {...rest} className={`${className} dropdown`}>
-            {list.map((item, index) => (
-                <option value={item} key={index}>
-                    {item}
-                </option>
-            ))}
-            <option>heloww</option>
+  return (
+    <div className={`dropdown ${className}`}>
+      {label && <div className="text-[1.6rem] mb-[1rem] font-[600]">{label}</div>}
+      <div className="">
+        <select {...rest} className={` dropdown_select `}>
+          {list?.map((item, index) => (
+            <option value={item} key={index}>
+              {item}
+            </option>
+          ))}
+          <option>Orthers</option>
         </select>
-    );
+      </div>
+    </div>  
+  );
 }
 
 export default Dropdown;

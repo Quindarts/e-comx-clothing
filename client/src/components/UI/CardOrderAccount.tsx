@@ -9,6 +9,7 @@ interface CardOrderAccountPropsType {
     status: string;
 }
 function CardOrderAccount(props: CardOrderAccountPropsType) {
+
     const { list, date, codeOrder, status } = props;
     return (
         <div className="card_order_account">

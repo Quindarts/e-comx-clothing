@@ -44,7 +44,9 @@ function PopupCart() {
                             className="w-[20rem] h-[5.4rem]"
                             variant="contain"
                             color="white"
-                            onClick={()=>navigate(ROUTE.CART)}
+                            onClick={()=>{
+                                handleActive()
+                                navigate(ROUTE.CART)}}
                         >
                             View Cart
                         </Button>
@@ -52,6 +54,9 @@ function PopupCart() {
                             className="w-[20rem] h-[5.4rem]"
                             variant="contain"
                             color="black"
+                            onClick={()=>{
+                                handleActive()
+                                navigate(ROUTE.CHECKOUT)}}
                         >
                             Checkout
                         </Button>

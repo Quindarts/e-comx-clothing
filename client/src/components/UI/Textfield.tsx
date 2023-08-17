@@ -1,12 +1,12 @@
 import React from "react";
 
-type TextFieldPropsType = {
+interface TextFieldPropsType extends React.AllHTMLAttributes<HTMLInputElement>  {
     label?: string;
-    placeholder?: string;
-    type?: string;
-    size?: "sm" | "md" | "lg";
-    className?: string;
-    value?: string;
+    // placeholder?: string;
+    // type?: string;
+    // size?: "sm" | "md" | "lg";
+    // className?: string;
+    // value?: string;
 };
 function Textfield(props: TextFieldPropsType) {
     const {

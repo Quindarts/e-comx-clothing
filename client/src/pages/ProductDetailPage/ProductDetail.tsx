@@ -6,6 +6,7 @@ import ProductSuggested from "./ProductSuggested";
 import FrameProductDetail from "components/UI/FrameProductDetail";
 
 function ProductDetail() {
+  
   return (
     <div className="product_detail_page">
       <FrameProductDetail isPage={true}/>

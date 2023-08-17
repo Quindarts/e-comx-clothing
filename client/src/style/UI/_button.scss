@@ -51,6 +51,13 @@
     }
     &_outline--primary {
         @include text(1.4rem, 600, $btn-outline-primary, 2rem);
+        padding: 1rem!important;
+        border-radius: 1rem;
+        &:hover {
+            background-color: $blue-500;
+            transition: 0.2s ease-in;
+            color: $white!important;
+        }
     }
     &--icon {
         padding: 1rem;

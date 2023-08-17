@@ -1,0 +1,22 @@
+.custom_order_information {
+  width: 100%;
+  @include respond(desktop){
+    width: 50%;
+  }
+  &--card {
+    border: 2px solid $grey-450;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin: 1rem 0;
+    .header {
+      border-bottom: 2px solid $grey-400;
+
+      .title {
+        @include text(2.4rem, 600, $black);
+        .submit_text {
+          @include text(1.4rem, 400, $black);
+        }
+      }
+    }
+  }
+}

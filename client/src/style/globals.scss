@@ -26,3 +26,13 @@
 @import "ProductDetailPage/index.scss";
 @import "aboutpage";
 @import "contactpage";
+@import "CheckoutPage/index.scss";
+.MuiFormControl-root {
+  label {
+    @include text(1.8rem, 600, $black);
+  }
+  .MuiTypography-root {
+    @include text(1.6rem, 400, $grey-800);
+  }
+    margin-left: 1rem;
+}

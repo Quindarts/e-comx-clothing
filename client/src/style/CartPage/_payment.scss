@@ -1,21 +1,17 @@
 .payment {
-    width: 100%;
-    @include respond(large-desktop){
-        width: 35%;
-    }
+  width: 100%;
   h1 {
     @include text(2rem, 600, $black);
     margin-bottom: 2rem;
   }
   &_detail {
     &--items {
-        padding-bottom: 2rem;
-        margin-bottom: 1rem;
-        border-bottom: 2px solid $grey-400;
+      padding-bottom: 2rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid $grey-400;
       @include text(1.8rem, 400, $grey-600);
-      span{
-      @include text(1.8rem, 700, $black);
-
+      span {
+        @include text(1.8rem, 700, $black);
       }
     }
   }

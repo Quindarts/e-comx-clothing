@@ -1,4 +1,5 @@
 .dropdown {
+  &_select {
     border: 2px solid $grey-500;
     border-radius: 2rem;
     outline: none;
@@ -11,4 +12,5 @@
     @include text(1.6rem, 400, $black);
     background-color: white;
     padding: 0.8rem 4rem 0.8rem 1.2rem;
+  }
 }

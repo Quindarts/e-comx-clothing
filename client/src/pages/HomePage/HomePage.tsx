@@ -69,7 +69,7 @@ function HomePage() {
                     </Button>
                   </div>
                   <div className="content_slide--img">
-                    <img src={img} alt="img_slide" />
+                    <img src={img} alt="img_slide" loading="lazy" />
                   </div>
                 </div>
               </SwiperSlide>
@@ -157,7 +157,7 @@ function HomePage() {
             </div>
           </div>
           <div className="lg:w-[52%]">
-            <img src={earnMoney} alt="earnMoney_homepage" />
+            <img src={earnMoney} alt="earnMoney_homepage" loading="lazy" />
           </div>
         </div>
 

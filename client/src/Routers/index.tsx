@@ -9,6 +9,7 @@ import SavedList from "pages/AccountPage/SavedList";
 import Blog from "pages/BlogPage/Blog";
 import BlogDetail from "pages/BlogPage/BlogDetail";
 import CartPage from "pages/CartPage/CartPage";
+import CheckoutPage from "pages/CheckoutPage/CheckoutPage";
 import CollectionPage from "pages/CollectionPage/CollectionPage";
 import Component from "pages/Component";
 import ContactPage from "pages/ContactPage";
@@ -43,6 +44,7 @@ const Routing: React.FC = () => {
         <Route path={ROUTE.BLOG} element={<Blog />} />
         <Route path={ROUTE.BLOG_DETAIL} element={<BlogDetail />} />
         <Route path={ROUTE.CART} element={<CartPage />} />
+        <Route path={ROUTE.CHECKOUT} element={<CheckoutPage/>} />
       </Route>
     </Routes>
   );
