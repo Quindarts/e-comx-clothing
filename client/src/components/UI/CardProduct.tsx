@@ -9,7 +9,6 @@ interface CardProductPropsType {
   handleClickToast: () => void;
 }
 function CardProduct(props: CardProductPropsType) {
-
   const { handleClickToast, handleOpenModal } = props;
   const navigate = useNavigate();
   return (
@@ -51,14 +50,14 @@ function CardProduct(props: CardProductPropsType) {
             <h1>Leather Gloves</h1>
             <p>Perfect mint green</p>
           </div>
-          <div className="flex card_content--price_reviews mt-5 justify-between">
+          <div className="flex card_content--price_reviews mt-5 justify-between items-center">
             <Button
-              className="flex items-center"
+              className="flex items-center text-[2rem] font-bold"
               variant="outline"
               color="green"
+              style={{ border: "none" }}
             >
-              <Icon icon={ICON_LIBARY.i_dollar} />
-              42
+              200.000D
             </Button>
             <span className="flex items-center pt-4">
               4.9

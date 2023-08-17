@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import logo from "assets/image/logo.svg";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { ICON_LIBARY, ROUTE } from "utils/constants";
 import Button from "components/UI/Button";
 import { Icon } from "@iconify/react";
@@ -9,6 +9,7 @@ import PopupUser from "./PopupUser";
 import PopupCart from "./PopupCart";
 import Textfield from "components/UI/Textfield";
 function Header() {
+    const navigate = useNavigate();
     const [openModal, setOpenModal] = useState<boolean>(false);
     const handleCloseModal = () => {
         setOpenModal(!openModal);
@@ -28,8 +29,8 @@ function Header() {
                         </Link>
                     </div>
                     <div className="navbar">
-                        <Link to={ROUTE.MEN}>Men</Link>
-                        <Link to={ROUTE.WOMAN}>Woman</Link>
+                        <Link to={ROUTE.COLLECTION_MEN}>Men</Link>
+                        <Link to={ROUTE.COLLECTION_WOMAN}>Woman</Link>
                         <Link to={ROUTE.COLLECTION}>Collection</Link>
                         <Link to={ROUTE.ABOUT}>About</Link>
                         <Link to={ROUTE.CONTACT}>Contact</Link>
@@ -40,6 +41,7 @@ function Header() {
                             id="desk_search"
                             className="control_header--item"
                             size="icon"
+                            onClick={()=> navigate(ROUTE.COLLECTION_SEARCH)}
                         >
                             <Icon icon={ICON_LIBARY.i_search} />
                         </Button>
@@ -82,8 +84,8 @@ function Header() {
                         <Textfield placeholder="Type and press enter" />
                     </div>
                     <div className="navbar_mobile text-[2rem] flex flex-col">
-                        <Link to={ROUTE.MEN}>MEN</Link>
-                        <Link to={ROUTE.WOMAN}>WOMAN</Link>
+                        <Link to={ROUTE.COLLECTION_MEN}>MEN</Link>
+                        <Link to={ROUTE.COLLECTION_WOMAN}>WOMAN</Link>
                         <Link to={ROUTE.COLLECTION}>COLLECTION</Link>
                         <Link to={ROUTE.ABOUT}>ABOUT</Link>
                         <Link to={ROUTE.CONTACT}>CONTACT</Link>

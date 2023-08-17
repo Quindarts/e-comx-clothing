@@ -1,20 +1,30 @@
 .control_filter {
-    &--top {
-        width: 100%;
-
-        .filter_aside {
-            .type_btn {
-                padding: 1.2rem 2.4rem;
-                border-radius: 9999px;
-                @include text(1.6rem, 500, $grey-300);
-                &:hover {
-                    transition: 0.2s ease-in;
-                    background-color: $grey-650;
-                }
-            }
-        }
-        .filter_btn {
-            padding: 1.2rem 2.4rem;
-        }
+  &--top {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      display: none;
     }
+    .filter_aside {
+      .type_btn {
+        padding: 0.6rem 2.4rem;
+        border-radius: 9999px;
+        @include text(1rem, 500, $grey-300);
+        @include respond(large-mobile) {
+          font-size: 1.6rem;
+          padding: 1.2rem 2.4rem;
+        }
+        &:hover {
+          transition: 0.2s ease-in;
+          background-color: $grey-650;
+        }
+      }
+    }
+    .filter_btn {
+      padding: 1.2rem 2.4rem;
+    }
+  }
 }

@@ -53,8 +53,9 @@ function ControlFilter() {
       <div className="border border-spacing-0 my-[3.2rem]"></div>
       {isShowFilter && (
         <div className="control_filter--content flex gap-5">
-          {CATEGORY_CONTROL_FILTER.map((item) => (
+          {CATEGORY_CONTROL_FILTER.map((item, key) => (
             <PopupDesktop
+              key={key}
               type={item.type}
               mainType={item.mainType}
               list={item.list}

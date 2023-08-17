@@ -1,4 +1,5 @@
 import Accountlayout from "layouts/Accountlayout";
+import CollectionLayout from "layouts/CollectionLayout";
 import Mainlayout from "layouts/Mainlayout";
 import AboutPage from "pages/AboutPage";
 import AccountOrder from "pages/AccountPage/AccountOrder";
@@ -11,6 +12,9 @@ import BlogDetail from "pages/BlogPage/BlogDetail";
 import CartPage from "pages/CartPage/CartPage";
 import CheckoutPage from "pages/CheckoutPage/CheckoutPage";
 import CollectionPage from "pages/CollectionPage/CollectionPage";
+import MenPage from "pages/CollectionPage/MenPage";
+import SearchPage from "pages/CollectionPage/SearchPage";
+import WomanPage from "pages/CollectionPage/WomanPage";
 import Component from "pages/Component";
 import ContactPage from "pages/ContactPage";
 import HomePage from "pages/HomePage/HomePage";
@@ -39,12 +43,20 @@ const Routing: React.FC = () => {
           />
           <Route path={ROUTE.ACCOUNT_ORDED} element={<AccountOrder />} />
         </Route>
-        
+
+        <Route path={ROUTE.COLLECTION} element={<CollectionLayout />}>
+          <Route index element={<CollectionPage />} />  
+          <Route path={ROUTE.COLLECTION_SEARCH} element={<SearchPage />} />
+          <Route path={ROUTE.COLLECTION_MEN} element={<MenPage />} />
+          <Route path={ROUTE.COLLECTION_WOMAN} element={<WomanPage />} />
+
+        </Route>
+
         <Route path={ROUTE.PRODUCT_DETAIL} element={<ProductDetail />} />
         <Route path={ROUTE.BLOG} element={<Blog />} />
         <Route path={ROUTE.BLOG_DETAIL} element={<BlogDetail />} />
         <Route path={ROUTE.CART} element={<CartPage />} />
-        <Route path={ROUTE.CHECKOUT} element={<CheckoutPage/>} />
+        <Route path={ROUTE.CHECKOUT} element={<CheckoutPage />} />
       </Route>
     </Routes>
   );

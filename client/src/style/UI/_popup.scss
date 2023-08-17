@@ -47,7 +47,7 @@
         border-radius: 0 0 1.6rem 1.6rem;
     }
     &_main--list--active {
-        z-index: 1;
+        z-index: 21;
         opacity: 1;
         display: block;
         animation: showPopup 0.2s ease-in;

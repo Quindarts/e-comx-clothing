@@ -52,7 +52,6 @@ export const ROUTE = {
   INDEX: "/",
   COLLECTION: "/collection",
   CART: "/cart",
-  SEARCH: "/search",
   CHECKOUT: "/checkout",
   NOT_FOUND: "/not-found",
   PRODUCT_DETAIL: "/product-detail",
@@ -71,8 +70,10 @@ export const ROUTE = {
   ACCOUNT_BILLING: "/account/billing",
 
   //OTHERS
-  MEN: "/collection/men",
-  WOMAN: "collection/woman",
+  COLLECTION_SEARCH: "/collection/search",
+  COLLECTION_ALL: "collection/all",
+  COLLECTION_MEN: "/collection/men",
+  COLLECTION_WOMAN: "/collection/woman",
   ABOUT: "/about",
   CONTACT: "/contact",
 
