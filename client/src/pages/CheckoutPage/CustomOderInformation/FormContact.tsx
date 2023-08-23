@@ -11,9 +11,13 @@ function FormContact(props: any) {
     <div className="form_contact">
       <h1 className="flex font-bold  text-[1.6rem] sm:text-[2rem] justify-between items-center">
         Contact infomation
-        <span className="font-[400]">Do not have an account?
-        <Link className="text-[1rem] text-blue-400" to={ROUTE.LOGIN}> Log in</Link>
-         </span>{" "}
+        <span className="font-[400]">
+          Do not have an account?
+          <Link className="text-[1rem] text-blue-400" to={ROUTE.LOGIN}>
+            {" "}
+            Log in
+          </Link>
+        </span>{" "}
       </h1>
       <Textfield
         className="mt-[2rem]"

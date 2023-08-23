@@ -107,6 +107,8 @@ function Component() {
                     className="w-[25rem]"
                     type="text"
                     label="Confirm password"
+                    errorMessage="Not valid email"
+                    error={true}
                 />
             </div>
             <h2 className="text-[2rem] my-2">TextArea</h2>

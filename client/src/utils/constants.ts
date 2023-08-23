@@ -133,6 +133,7 @@ export const ICON_LIBARY = {
   i_world: "fontisto:world-o",
   i_blockchain: "eos-icons:blockchain",
   i_tickcircle: "charm:circle-tick",
+  i_google: "devicon:google",
 };
 
 // [FILTER LIST OPTIONS ]

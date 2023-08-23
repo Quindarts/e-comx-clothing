@@ -1,0 +1,47 @@
+.login_page,
+.register_page {
+  width: 50rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 12.8rem;
+  padding: 0 1.6rem 12.8rem 1.6rem;
+  @include respond(large-mobile) {
+    max-width: 64rem;
+  }
+  @include respond(tablet) {
+    max-width: 76.8rem;
+  }
+  @include respond(desktop) {
+    max-width: 102.4rem;
+  }
+  @include respond(large-desktop) {
+    max-width: 128rem;
+    padding: 0 4rem 12.8rem 4rem;
+  }
+  h1 {
+    @include text(5rem, 600, $black);
+  }
+  .form_btn {
+    width: 100%;
+    background-color: #f0f9ff;
+    @include text(1.4rem, 400, $black);
+    text-align: center;
+    border-radius: 1rem;
+    padding: 0.5rem 1rem;
+    margin: 1rem 0;
+    &:hover {
+      background-color: #d2eafa;
+      transition: 0.2s ease-in;
+    }
+  }
+  .btn_submit_login {
+    @include text(1.6rem, 600, $white);
+    padding: 1rem;
+  }
+  p {
+    @include text(1.4rem, 400, $black);
+    a {
+      @include text(1.4rem, 400, #41a360);
+    }
+  }
+}
