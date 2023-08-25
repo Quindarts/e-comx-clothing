@@ -10,7 +10,6 @@
     margin: 1rem 0;
     .header {
       border-bottom: 2px solid $grey-400;
-
       .title {
         @include text(2.4rem, 600, $black);
         .submit_text {

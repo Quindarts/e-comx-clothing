@@ -46,6 +46,11 @@ import blogItem1 from "assets/image/home/blogItem1.webp";
 import blogItem2 from "assets/image/home/blogItem2.webp";
 import blogItem3 from "assets/image/home/blogItem3.webp";
 
+export const REGEX= {
+  PASSWORD: /^(?!.*(\w)\1{2,})(?=.*\d)(?=.*[!@#$%^&*()_+[\]{};':"\\|,.<>/?-]).{8,}$/,
+  EMAIL:  /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/,
+  NAME: /^[A-Z][a-z]*(\s[A-Z][a-z]*)*$/,
+}
 // [APP ROUTE]
 export const ROUTE = {
   //MAIN
@@ -84,6 +89,7 @@ export const ROUTE = {
 
 // [ICON TEMPLATE]
 export const ICON_LIBARY = {
+  i_eye: "solar:eye-linear",
   i_search: "ep:search",
   i_user: "ri:user-line",
   i_cart: "fluent:cart-24-regular",

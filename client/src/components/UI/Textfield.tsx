@@ -1,4 +1,6 @@
+import { Icon } from "@iconify/react";
 import React from "react";
+import { ICON_LIBARY } from "utils/constants";
 
 interface TextFieldPropsType extends React.AllHTMLAttributes<HTMLInputElement> {
   label?: string;
@@ -8,7 +10,7 @@ interface TextFieldPropsType extends React.AllHTMLAttributes<HTMLInputElement> {
   // className?: string;
   // value?: string;
   errorMessage?: string;
-  error? : boolean;
+  error?: boolean;
 }
 function Textfield(props: TextFieldPropsType) {
   const {
@@ -31,6 +33,7 @@ function Textfield(props: TextFieldPropsType) {
     >
       {label && <label className="textfield_title">{label}</label>}
       <input value={value} type={type} placeholder={placeholder} />
+      {type === "password" && <div className="absolute"><Icon color="gray" width={20} icon={ICON_LIBARY.i_eye} /> </div>}
       {error && (
         <label className="textfield_error--message text-red-500">
           {errorMessage}
