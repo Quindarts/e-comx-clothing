@@ -19,6 +19,7 @@
         "dotenv": "^16.3.1",
         "es-abstract": "^1.22.1",
         "facebook-sdk": "^0.3.3",
+        "formik": "^2.4.3",
         "module-name": "^0.0.1-security",
         "node-sass": "^7.0.3",
         "notistack": "^3.0.1",
@@ -31,7 +32,8 @@
         "react-social-login-buttons": "^3.9.1",
         "reactjs-social-login": "^2.6.2",
         "swiper": "^9.4.0",
-        "web-vitals": "^2.1.4"
+        "web-vitals": "^2.1.4",
+        "yup": "^1.2.0"
     },
     "scripts": {
         "start": "set HTTPS=true&&set SSL_CRT_FILE=./.cert/cert.pem&&set SSL_KEY_FILE=./.cert/key.pem&&react-scripts start",

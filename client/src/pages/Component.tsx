@@ -19,11 +19,6 @@ import useModal from "hooks/useModal";
 function Component() {
   const listDrop = ["Ho Chi Minh", "Ha Nam", "Hue", "Ha Noi"];
 
-  // //[MODAL]
-  // const [openModal, setOpenModal] = useState<boolean>(false);
-  // const handleCloseModal = () => {
-  //     setOpenModal(!openModal);
-  // };
   const { openModal, handleCloseModal, handleOpenModal } = useModal();
 
   //[TOAST]
@@ -33,25 +28,6 @@ function Component() {
   const { enqueueSnackbar } = useSnackbar();
   const handleClickVariant = (variant: VariantType) => () => {
     enqueueSnackbar("This is a success message!", { variant });
-  };
-  const [isError, setIsError] = useState<boolean>();
-  const [messageErr, setMessageErr] = useState("");
-  const onChangeTextField = (value: string) => {
-
-    if(value === ""){
-        setMessageErr("Truong nay khong duoc bo trong")
-    }
-   else if(value.length < 8){
-        setMessageErr("Mat khau phai tren 8 ki tu")
-    }
-    else if(isError === true){
-        setMessageErr("Mat khau khong thoa man yeu cau")
-    }
-    else{
-        setMessageErr("Done");
-    }
-    setIsError(!REGEX.PASSWORD.test(value));
-    
   };
   return (
     <div className="w-[100%] my-5">
@@ -124,9 +100,6 @@ function Component() {
           className="w-[25rem]"
           type="password"
           label="Confirm password"
-          errorMessage={messageErr}
-          error={isError}
-          onChange={(e: any)=>onChangeTextField(e.target.value)}
         />
       </div>
       <h2 className="text-[2rem] my-2">TextArea</h2>

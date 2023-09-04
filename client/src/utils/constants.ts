@@ -46,11 +46,24 @@ import blogItem1 from "assets/image/home/blogItem1.webp";
 import blogItem2 from "assets/image/home/blogItem2.webp";
 import blogItem3 from "assets/image/home/blogItem3.webp";
 
-export const REGEX= {
-  PASSWORD: /^(?!.*(\w)\1{2,})(?=.*\d)(?=.*[!@#$%^&*()_+[\]{};':"\\|,.<>/?-]).{8,}$/,
-  EMAIL:  /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/,
+export const REGEX = {
+  PASSWORD:
+    /^(?!.*(\w)\1{2,})(?=.*\d)(?=.*[!@#$%^&*()_+[\]{};':"\\|,.<>/?-]).{8,}$/,
+  EMAIL: /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/,
   NAME: /^[A-Z][a-z]*(\s[A-Z][a-z]*)*$/,
-}
+};
+export const REGEX_ERROR_MESSAGE = {
+  PASSWORD: {
+    length: "Password must be over 8 characters",
+    basic: "Password must have 1 special character, 1 uppercase letter, 1 lowercase letter and 1 numeric character",
+    require: "Password cannot be empty",
+  },
+  EMAIL: {
+    length: "Email must be over 8 characters",
+    basic: "Invalid email address",
+    require: "Email cannot be empty",
+  },
+};
 // [APP ROUTE]
 export const ROUTE = {
   //MAIN
