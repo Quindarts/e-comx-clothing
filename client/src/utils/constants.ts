@@ -56,13 +56,18 @@ export const REGEX_ERROR_MESSAGE = {
   PASSWORD: {
     length: "Password must be over 8 characters",
     basic: "Password must have 1 special character, 1 uppercase letter, 1 lowercase letter and 1 numeric character",
-    require: "Password cannot be empty",
+    require: "Password is required",
   },
   EMAIL: {
     length: "Email must be over 8 characters",
     basic: "Invalid email address",
-    require: "Email cannot be empty",
+    require: "Email password is required",
   },
+  CONFIRM_PASSWORD :{
+    length:"Confirm password should be of minimum 8 characters length",
+    basic:"Confirm password must match with password",
+    require:"Confirm password is required",
+  }
 };
 // [APP ROUTE]
 export const ROUTE = {
